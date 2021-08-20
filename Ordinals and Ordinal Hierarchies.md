@@ -1,5 +1,7 @@
 ---
 title: Ordinals and Ordinal Hierarchies – A beginner's guide to countable ordinals
+author:
+- Timothy Gowers
 ---
 
 ### Prerequisites
@@ -33,21 +35,16 @@ The aims of this page are to show
 -   that ordinals crop up naturally in many contexts, so that it is
     worth understanding them, at least in the naive way outlined below.\
 
-------------------------------------------------------------------------
 
-[]{#3problems}
+Three problems
+--------------------------------------------------------------------------------
 
-Three problems.
----------------
-
-------------------------------------------------------------------------
-
-[The idea of this section is to show how ordinals arise naturally in
+The idea of this section is to show how ordinals arise naturally in
 three contexts. Quite a bit of the discussion, particularly with
 Problems 2 and 3, is about the contexts themselves rather than about
 ordinals. I have therefore given various opportunities for the reader to
 jump to the end of the section and start reading the more general
-theory. The first one is]{#3problems}[now](#wosets).
+theory. The first one is [now](#wosets).
 
 ### Problem 1. Showing that a continuous function on \[0,1\] is bounded.
 
@@ -180,9 +177,7 @@ eventually it ceases to be possible.
 Click [here](#wosets) if you would now like to skip to a general
 discussion of well-ordered sets and ordinals.
 
-------------------------------------------------------------------------
-
-### Problem 2. Generating the Borel sets.
+### Problem 2. Generating the Borel sets
 
 A *Borel set* of real numbers is a set that can be built out of open or
 closed sets by repeatedly taking countable unions or countable
@@ -249,9 +244,7 @@ which sets belong to U~w^w^~.
 Click [here](#wosets) if you would now like to skip to a general
 discussion of well-ordered sets and ordinals.
 
-------------------------------------------------------------------------
-
-### Problem 3. Showing that open games are determined.
+### Problem 3. Showing that open games are determined
 
 Many two-player games of skill are special cases of the following
 general one. Write N^N^ for the set of all sequences of positive
@@ -377,14 +370,8 @@ player 1 must. But this gives player 1 a strategy for the whole game -
 do that first move and then apply whatever winning strategy is
 appropriate after player 2\'s first move.
 
-------------------------------------------------------------------------
-
-[]{#wosets}
-
-Well-ordered sets.
-------------------
-
-------------------------------------------------------------------------
+Well-ordered sets {#wosets}
+--------------------------------------------------------------------------------
 
 ### Definition of well-ordered sets
 
@@ -409,9 +396,7 @@ Amongst those we can take the ones with smallest next coefficient, and
 so on. We end up with a polynomial p which is smaller in the ordering
 than every other q in P.
 
-------------------------------------------------------------------------
-
-### Maps between well-ordered sets.
+### Maps between well-ordered sets
 
 A set with a total ordering is called a totally ordered set. A map f
 between two totally ordered sets X and Y is called an
@@ -452,7 +437,7 @@ Then either f(Z)=Y, in which case we are done, or f(Z) is a proper
 subset of Y, in which case Z must be the whole of X or we\'d be able to
 extend f.
 
-------------------------------------------------------------------------
+
 
 ### Order-types of well-ordered sets.
 
@@ -481,14 +466,8 @@ every well-ordered set is order-isomorphic to exactly one of our special
 ones. We will call them 1,2,3,\...,w,w+1,\.... etc. and the general name
 for them will be ordinals.
 
-------------------------------------------------------------------------
-
-[]{#using}
-
-How to use ordinals.
---------------------
-
-------------------------------------------------------------------------
+How to use ordinals {#using}
+--------------------------------------------------------------------------------
 
 Let us think once again about the three problems we were grappling with
 earlier. What we were looking for was an *indexing set* - that is, a set
@@ -549,7 +528,7 @@ anything goes wrong. But I\'ve just shown unambiguously how to define
 t~y~ once I\'ve defined t~x~ for all previous x.) It follows that for
 some y t~y~=1 and this shows that f is bounded on \[0,1\].
 
-------------------------------------------------------------------------
+
 
 Now let us return to Borel sets. We can measure the complexity of such
 sets as follows. Say that a set has complexity at most 1 if it is open
@@ -588,7 +567,7 @@ there is a Borel set of complexity x. (Earlier we showed this for x=2,
 with an unnecessarily complicated example - the rational numbers is
 another.)
 
-------------------------------------------------------------------------
+
 
 Using X, we can also measure the complexity of winning strategies for
 player I in open games. By X I now mean the uncountable well-ordered set
@@ -627,14 +606,9 @@ in W - by the definition of an open game. But this contradicts the fact
 that player 1 never wins. Hence, player 2 has a way of ensuring that the
 game results in a sequence not in W - that is, has a winning strategy.
 
-------------------------------------------------------------------------
 
-[]{#uncountablewoset}
-
-Proof that there is an uncountable well-ordered set.
-----------------------------------------------------
-
-------------------------------------------------------------------------
+Proof that there is an uncountable well-ordered set {#uncountablewoset}
+--------------------------------------------------------------------------------
 
 Recall from earlier that we wanted to define ordinals to be
 order-isomorphism classes of well-ordered sets, but that set-theoretical
@@ -691,14 +665,8 @@ successor of \[b\] cannot be one of the \[a~n~\]. (The successor is
 obtained by taking a bounded isomorphic copy of b, adding in an upper
 bound and taking the isomorphism class.)
 
-------------------------------------------------------------------------
-
-[]{#notusing}
-
-How not to use ordinals.
-------------------------
-
-------------------------------------------------------------------------
+How not to use ordinals {#notusing}
+--------------------------------------------------------------------------------
 
 Now comes the moment to admit that my \`applications\' of countable
 ordinals were, in a sense, a con. The application to Borel sets wasn\'t
@@ -712,11 +680,7 @@ assertion, I myself know of only one theorem proved with countable
 ordinals for which a neater ordinal-free proof has not been discovered,
 and even there I am convinced that it exists.
 
-------------------------------------------------------------------------
-
-[]{#induction}
-
-### Ordinals and induction.
+### Ordinals and induction {#induction}
 
 It is a familiar fact about induction that it can be done in two ways.
 Given a sequence of statements P(n), either you prove P(0) and that
@@ -746,8 +710,6 @@ more of the statement, whereas with minimal counterexamples one has the
 illusion that the proof takes only one step. For this reason, choosing a
 minimal counterexample is often cleaner. The same is true for
 generalized \`ordinal induction\'.
-
-------------------------------------------------------------------------
 
 ### Solving problems 1 and 3 without ordinals.
 
@@ -790,8 +752,6 @@ and in fact I do not know of a formal procedure for removing ordinals
 from proofs, though again I feel that something might be possible (and
 might be known to set theorists).
 
-------------------------------------------------------------------------
-
 I devoted some time to explaining why it wasn\'t obvious that all games
 are determined. However, I do not wish to suggest that one\'s intuition
 that they are is entirely stupid. Why, for example, is it obvious in
@@ -820,14 +780,8 @@ shown is that the ordinals were a red herring. It is interesting to
 classify strategies by their ordinal complexity, but quite unnecessary
 if all one wants is the easy result that open games are determined.
 
-------------------------------------------------------------------------
-
-[]{#undetermined}
-
-A very brief sketch of how to \"construct\" a game that is not determined.
---------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+A very brief sketch of how to "construct" a game that is not determined {#undetermined}
+--------------------------------------------------------------------------------
 
 As I mentioned earlier, this needs the axiom of choice, so this section
 requires slightly more knowledge than the rest of the page. (I should
@@ -867,14 +821,8 @@ been considered, the remaining sequences can be assigned to X or X^c^
 arbitrarily. And now, in a trivial just-do-it way we have made sure that
 no strategy is a winning strategy.
 
-------------------------------------------------------------------------
-
-[]{#infplusone}
-
-How can infinity plus one not be infinity?
-------------------------------------------
-
-------------------------------------------------------------------------
+How can infinity plus one not be infinity? {#infplusone}
+--------------------------------------------------------------------------------
 
 There was a time when this question bothered me and made me feel uneasy
 about ordinals. However, it has a simple and precise answer, one that is
