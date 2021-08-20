@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pandoc --toc -o "Ordinals and Ordinal Hierarchies.pdf" "Ordinals and Ordinal Hierarchies.md"
