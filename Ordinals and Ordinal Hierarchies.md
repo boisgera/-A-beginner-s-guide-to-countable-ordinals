@@ -1,11 +1,6 @@
 ---
-title: Ordinals and Ordinal Hierarchies
+title: Ordinals and Ordinal Hierarchies – A beginner's guide to countable ordinals
 ---
-
-A beginner\'s guide to countable ordinals.
-==========================================
-
-------------------------------------------------------------------------
 
 ### Prerequisites
 
@@ -13,25 +8,7 @@ It would help to know basic real analysis, up to the definition of open
 and closed sets. But even without this, it might be possible to
 understand the general discussion and at least one of the examples.
 
-------------------------------------------------------------------------
-
 ### Contents
-
-#### [Three problems](#3problems)
-
-#### [Well-ordered sets](#wosets)
-
-#### [How to use ordinals](#using)
-
-#### [Proof that there is an uncountable well-ordered set](#uncountablewoset)
-
-#### [How not to use ordinals](#notusing)
-
-#### [A very brief sketch of how to \"construct\" a game that is not determined.](#undetermined)
-
-#### [How can infinity plus one not be infinity](#infplusone)?
-
-------------------------------------------------------------------------
 
 When one meets ordinals for the first time in a university course on set
 theory, they can seem quite forbidding. In particular, the notion of a
