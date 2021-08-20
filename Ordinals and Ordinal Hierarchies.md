@@ -14,10 +14,10 @@ understand the general discussion and at least one of the examples.
 
 When one meets ordinals for the first time in a university course on set
 theory, they can seem quite forbidding. In particular, the notion of a
-transitive set (a set X such that every element of X is also a subset of
+transitive set (a set $X$ such that every element of $X$ is also a subset of
 X) takes a little getting used to, and seems rather artificial. In fact,
 it *is* rather artificial - one would like to define an ordinal to be an
-equivalence class of well-ordered sets (if you don\'t know what I mean
+equivalence class of well-ordered sets (if you don't know what I mean
 by this, then you can come back to these preliminary remarks after
 reading the explanations below) but this creates difficulties of a
 the-set-of-all-sets kind, and is therefore not allowed. Instead one is
@@ -28,15 +28,14 @@ The aims of this page are to show
 
 -   that it is possible to *use* ordinals without knowing how they are
     constructed (rather as one can do real analysis without knowing how
-    real numbers are constructed);\
+    real numbers are constructed);
 -   that the countable ordinals, which are sufficient for many
     applications, can be constructed rigorously in a way that requires
-    more or less no knowledge of set theory;\
+    more or less no knowledge of set theory;
 -   that ordinals crop up naturally in many contexts, so that it is
-    worth understanding them, at least in the naive way outlined below.\
+    worth understanding them, at least in the naive way outlined below.
 
-
-Three problems
+Three problems {#three-problems}
 --------------------------------------------------------------------------------
 
 The idea of this section is to show how ordinals arise naturally in
@@ -46,69 +45,69 @@ ordinals. I have therefore given various opportunities for the reader to
 jump to the end of the section and start reading the more general
 theory. The first one is [now](#wosets).
 
-### Problem 1. Showing that a continuous function on \[0,1\] is bounded.
+### Problem 1. Showing that a continuous function on $[0,1]$ is bounded.
 
 I have discussed this problem in detail on a [different
 page](https://www.dpmms.cam.ac.uk/~wtg10/bounded.html). Here I shall be
 a little briefer about the real analysis but much more detailed about
 the aspect of the problem that relates to ordinals.
 
-If f is continuous on \[0,1\] and bounded on \[0,t\], then, by
-continuity at t, one can find s\> t such that f is bounded on the
-interval \[0,s\]. Let us call this the **basic lemma** . Using the basic
-lemma repeatedly, one can build a sequence of numbers 0\< t~1~\< t~2~\<
-t~3~\< \... in such a way that f is bounded on the interval \[0,t~n~\]
-for every n (though so far we do not know whether f is bounded on the
+If f is continuous on $[0, 1]$ and bounded on $[0, t]$, then, by
+continuity at $t$, one can find $s>t$ such that f is bounded on the
+interval $[0, s]$. Let us call this the **basic lemma** . Using the basic
+lemma repeatedly, one can build a sequence of numbers $0 < t_1 < t_2 <
+t_3 < \dots$ in such a way that f is bounded on the interval $[0, t_n]$
+for every $n$ (though so far we do not know whether f is bounded on the
 union of all those intervals).
 
-Since the t~n~ all live in \[0,1\], they form a monotonic sequence which
+Since the $t_n$ all live in $[0, 1]$, they form a monotonic sequence which
 is bounded above. Hence, they converge to some limit, which, with the
-considerable benefit of hindsight, I shall call t~w~, where the w should
-be read as \`omega\'. By continuity, there is some interval around t~w~
-on which f is bounded. Since this interval contains t~n~ for all
+considerable benefit of hindsight, I shall call $t_w$, where the $w$ should
+be read as "$\omega$". By continuity, there is some interval around $t_w$
+on which $f$ is bounded. Since this interval contains $t_n$ for all
 sufficiently large n, we can deduce that f is bounded all the way to
-t~w~. Thus, f *was* bounded on the union of the intervals \[0,t~n~\],
+$t_w$. Thus, $f$ *was* bounded on the union of the intervals $[0, t_n]$,
 though what we have now proved is very slightly stronger as it includes
-the end point t~w~.
+the end point $t_w$.
 
-Now we can continue the sequence \`beyond infinity\' by using the basic
-lemma repeatedly, starting at t~w~. This gives us a second sequence
-t~w~\< t~w+1~\< t~w+2~\< \... such that f is bounded on the interval
-\[0,t~w+n~\] for every n.
+Now we can continue the sequence "beyond infinity" by using the basic
+lemma repeatedly, starting at $t_w$. This gives us a second sequence
+$t_w < t_{w+1} < t_{w+2} < \dots$ such that $f$ is bounded on the interval
+$[0,t_{w+n}]$ for every $n$.
 
 It may look as though there is something not quite rigorous going on
 here. If you think of w as being infinity (as it is quite reasonable to
-do) then is it legitimate to start adding 1,2,3,\... to it? Doesn\'t
+do) then is it legitimate to start adding $1,2,3,\dots$ to it? Doesn't
 infinity plus one equal infinity?
 
 I shall return to this question, but for the time being let me say only
-this: there is nothing to stop me using expressions like w+17 if all I
-do is regard them as *notation* . Instead of writing t~w+n~ I could have
-written u~n~. Or I could have written t~0n~ for t~n~ and then t~1n~ for
-t~w+n~.
+this: there is nothing to stop me using expressions like $w+17$ if all I
+do is regard them as *notation* . Instead of writing $t_{w+n}$ I could have
+written $u_n$. Or I could have written $t_{0n}$ for $t_n$ and then $t_{1n}$ for
+$t_{w+n}$.
 
 Thus reassured, let us continue. By the same argument as before, the
-sequence (t~w+n~) converges, and it feels natural to write t~2w~ for its
-limit. Again, as before, f is bounded on the interval \[0,t~2w~\].
+sequence $(t_{w+n})$ converges, and it feels natural to write $t_{2w}$ for its
+limit. Again, as before, $f$ is bounded on the interval $[0,t_{2w}]$.
 
-Now we can continue the sequence - or perhaps one should say generalized
-sequence - with t~2w+1~, t~2w+2~ and so on. These converge to a number
-we can call t~3w~, and if we keep on going we will end up producing, for
-every m\> 0 and n\> 0, a number t~mw+n~ (I shall interpret t~0~ as 0)
-such that f is bounded on the interval \[0,t~mw+n~\]. Furthermore,
-t~mw+n~ will be greater than t~kw+l~ if and only if m\> k or m=k and n\>
-l.
+Now we can continue the sequence – or perhaps one should say generalized
+sequence – with $t_{2w+1}$, $t_{2w+2}$ and so on. These converge to a number
+we can call $t_{3w}$, and if we keep on going we will end up producing, for
+every $m> 0$ and $n > 0$, a number $t_{mw+n}$ (I shall interpret $t_0$ as $0$)
+such that $f$ is bounded on the interval $[0,t_{mw+n}]$. Furthermore,
+$t_{mw+n}$ will be greater than $t_{kw+l}$ if and only if $m > k$ or $m=k$ and 
+$n > l$.
 
-What can we say now? What if none of these numbers is bigger than 1/100,
+What can we say now? What if none of these numbers is bigger than $1/100$,
 as may well be the case? Well, we are not forced to stop, because we
-could consider the increasing sequence t~w~, t~2w~, t~3w~,\... . This
+could consider the increasing sequence $t_w, t_{2w}, t_{3w},\dots$ . This
 has a limit, which is easily seen to be bigger than any of the numbers
-t~mw+n~, and what\'s more there is a natural name for this limit -
-t~w^2^~. Once again, f will be bounded on the interval \[0,t~w^2^~\]
+$t_{mw+n}$, and what\'s more there is a natural name for this limit –
+$t_{w^2}$. Once again, $f$ will be bounded on the interval $[0,t_{w^2}]$.
 
 For convenience, let me state and prove a **second basic lemma** , the
 one that we use for limits of sequences. It says that if we have an
-increasing sequence of numbers u~1~, u~2~,\... in \[0,1\] and if f is a
+increasing sequence of numbers u~1~, u~2~,\... in $[0, 1]$ and if f is a
 continuous function that is bounded on the interval \[0,u~n~\] for every
 n, then the u~n~ converge to a limit u and f is bounded on the interval
 \[0,u\].
@@ -128,7 +127,7 @@ with positive integer coefficients, in such a way that they come in the
 obvious order (a neat way to describe it is that t~p(w)~\> t~q(w)~ if
 and only if p(n)\> q(n) for all sufficiently large integers n) and such
 that f is bounded on all the intervals \[0,t~p(w)~\]. Then we can apply
-the second basic lemma to the sequence t~w~, t~w^2^~, t~w^3^~,\...
+the second basic lemma to the sequence $t_w$, t~w^2^~, t~w^3^~,\...
 obtaining a limit, which is called - as you have probably guessed -
 t~w^w^~. I now leave it to you, if you are interested, to work out how
 to continue further, to t~w^w^w^^~ and beyond, and then to take a limit
@@ -197,7 +196,7 @@ interval, you can make the width of that interval depend on the point in
 order to leave other points out of your set.
 
 Once you have spotted that, then you can go much further. Let q~1~,
-q~2~, q~3~,\... be an enumeration of the rationals in \[0,1\] and for
+q~2~, q~3~,\... be an enumeration of the rationals in $[0, 1]$ and for
 each k let I~k~ be an interval of width r^-k^ centered on q~k~. Let
 A\'(r) be the union of all the sets I~k~ and let A(r) be the
 intersection of A\'(r) with (0,1). For r\> 2 the sum of the widths of
@@ -220,7 +219,7 @@ U~1~ consist of all intersections of countably many sets in U~0~. We
 cannot produce more sets by taking countable intersections of sets in
 U~1~ (since such sets will themselves belong to U~1~) but there is no
 guarantee that a countable *union* of sets in U~1~ will belong to U~1~.
-In fact, examples can be constructed that don\'t.
+In fact, examples can be constructed that don't.
 
 We can therefore define U~2~ to be the class of all countable unions of
 sets in U~1~, and in general can define U~n~ to be the set of all
@@ -248,7 +247,7 @@ discussion of well-ordered sets and ordinals.
 
 Many two-player games of skill are special cases of the following
 general one. Write N^N^ for the set of all sequences of positive
-integers, and let X be a subset of N^N^. Two players of the X-game take
+integers, and let $X$ be a subset of N^N^. Two players of the X-game take
 turns choosing positive integers, building a sequence
 (n~1~,n~2~,n~3~,\...). The first player wins if this sequence belongs to
 X and the second wins if it doesn\'t.
@@ -292,22 +291,22 @@ determined - using a \`just do it\' proof of a kind explained
 depends on well-orderings so I will give it [later on](#undetermined).
 
 An *open* game is defined to be one where, given any sequence
-(n~1~,n~2~,n~3~,\...) in X there exists a k such that all sequences that
+(n~1~,n~2~,n~3~,\...) in $X$ there exists a k such that all sequences that
 begin (n~1~,n~2~,\...,n~k~) are also in X. In other words, if the first
 player wins, then there was some point after which they would have won
 whatever moves they had played. Here are a few examples of open games.
 Although these games go on for ever, I shall think of them as finishing
-when they reach a finite sequence all of whose continuations lie in X -
+when they reach a finite sequence all of whose continuations lie in $X$ -
 after which point they are not very interesting.
 
-\(1) Let X be the set of all sequences with at least 300 occurrences of
+\(1) Let $X$ be the set of all sequences with at least 300 occurrences of
 the number 10. It is of course very easy for player 1 to win this game -
 one strategy is to choose the number 10 for the first 300 moves. More to
 the point, if player 1 wins, there must be some point at which the
 number 10 has appeared 300 times, after which nothing can affect the
 outcome of the game.
 
-\(2) Let X be the set of all sequences (n~1~,n~2~,n~3~,\...) with at
+\(2) Let $X$ be the set of all sequences (n~1~,n~2~,n~3~,\...) with at
 least n~10~ occurrences of the number 10. Again, player 1 has an easy
 strategy: wait for player 2 to choose n~10~ and then keep choosing 10s
 until there are enough of them. Notice a difference between this game
@@ -315,7 +314,7 @@ and the previous one though: whereas in the previous one player 1 could
 guarantee to win after 300 moves, in this one player 2 can make the game
 last arbitrarily long simply by choosing n~10~ arbitrarily large.
 
-\(3) Let X be the set of all sequences (n~1~,n~2~,n~3~,\...) with at
+\(3) Let $X$ be the set of all sequences (n~1~,n~2~,n~3~,\...) with at
 least n~n~10~~ occurrences of the number 10. Once again, player 1 has an
 easy strategy: wait for player 2 to choose n~10~, then wait for player 2
 to choose n~n~10~~ and then choose that number of 10s. Whereas with the
@@ -375,10 +374,10 @@ Well-ordered sets {#wosets}
 
 ### Definition of well-ordered sets
 
-A *total ordering* , or just ordering, on a set X is a transitive
-relation \< such that for every x,y in X exactly one of x\< y, x=y or
-y\< x is true. A total ordering is called a *well-ordering* if, in
-addition, every non-empty subset of X has a minimal element. That is, if
+A *total ordering* , or just ordering, on a set $X$ is a transitive
+relation < such that for every x,y in $X$ exactly one of x< y, x=y or
+y< $X$ is true. A total ordering is called a *well-ordering* if, in
+addition, every non-empty subset of $X$ has a minimal element. That is, if
 Y is a non-empty subset of X, there exists some y in Y such that every z
 in Y is greater than or equal to y.
 
@@ -386,12 +385,12 @@ The most familiar well-ordering is the usual ordering on the natural
 numbers: every non-empty subset of N has a least element. (This fact is
 discussed a bit more [below](#induction).) A more complicated one was
 defined earlier, namely the set of all polynomials p with non-negative
-integer coefficients, with p \< q if and only if p(x)\< q(x) for all
+integer coefficients, with p < q if and only if p(x)< q(x) for all
 sufficiently large x. To see that this is a well-ordering, let P be a
 set of such polynomials. From P we can pick all polynomials of least
-degree. (Note that if deg(p)\< deg(q) then p\< 1.) Amongst those we can
+degree. (Note that if deg(p)< deg(q) then p< 1.) Amongst those we can
 select with smallest leading coefficient. (Note that if p has a smaller
-leading coefficient than q and they are of the same degree, then p\< q.)
+leading coefficient than q and they are of the same degree, then p< q.)
 Amongst those we can take the ones with smallest next coefficient, and
 so on. We end up with a polynomial p which is smaller in the ordering
 than every other q in P.
@@ -399,29 +398,29 @@ than every other q in P.
 ### Maps between well-ordered sets
 
 A set with a total ordering is called a totally ordered set. A map f
-between two totally ordered sets X and Y is called an
-*order-isomorphism* if it is a bijection and f(x)\< f(y) if and only if
-x\< y. In other words, it is an invertible map that preserves order. If
-there is an order-isomorphism between X and Y then X and Y are said to
+between two totally ordered sets $X$ and Y is called an
+*order-isomorphism* if it is a bijection and f(x)< f(y) if and only if
+x< y. In other words, it is an invertible map that preserves order. If
+there is an order-isomorphism between $X$ and Y then $X$ and Y are said to
 be *order-isomorphic* .
 
-Let X be a well-ordered set. An *initial segment* of X is a subset of
-the form I(z)={x:x\< z}. A very important fact about well-ordered sets
-is the following: if X and Y are well-ordered sets then either X is
-order-isomorphic to Y or one of X and Y is order-isomorphic to an
+Let $X$ be a well-ordered set. An *initial segment* of $X$ is a subset of
+the form I(z)={x:x< z}. A very important fact about well-ordered sets
+is the following: if $X$ and Y are well-ordered sets then either $X$ is
+order-isomorphic to Y or one of $X$ and Y is order-isomorphic to an
 initial segment of the other. Here is (a sketch of) how to prove it.
 
-Roughly what we want to do is to take the smallest element of X and pair
+Roughly what we want to do is to take the smallest element of $X$ and pair
 it with the smallest element of Y, then the next smallest then the next
 smallest and so on. Of course, this \`and so on\' is one of our
 problematic ones, because we may need to pair off the omegath smallest
 elements and so on well beyond infinity. However, we can avoid getting
 into those details by using the well-ordering property.
 
-Let Z be the set of all z in X such that I(z) is order-isomorphic to an
-initial segment of Y. If z is in Z and w\< z then it is easy to see that
-w is in Z. Hence, either Z is all of X or it is the initial segment
-I(u), where u is the least element of X that does not belong to Z.
+Let Z be the set of all z in $X$ such that I(z) is order-isomorphic to an
+initial segment of Y. If z is in Z and w< z then it is easy to see that
+w is in Z. Hence, either Z is all of $X$ or it is the initial segment
+I(u), where u is the least element of $X$ that does not belong to Z.
 
 Next, I claim that if z is in Z, then there is exactly one isomorphism
 from I(z) to an initial segment of Y. For if not, let w be minimal such
@@ -434,7 +433,7 @@ to f(I(v)).
 This observation allows us to define an order-isomorphism from Z into Y
 - each z in Z maps to the least element of Y not included in f(I(z)).
 Then either f(Z)=Y, in which case we are done, or f(Z) is a proper
-subset of Y, in which case Z must be the whole of X or we\'d be able to
+subset of Y, in which case Z must be the whole of $X$ or we\'d be able to
 extend f.
 
 
@@ -487,7 +486,7 @@ it.
 
 Let me show how this axiom, together with the two basic lemmas, solves
 Problem 1 for us, and allows us to conclude that continuous functions on
-\[0,1\] are bounded. Recall that we were building a sequence
+$[0, 1]$ are bounded. Recall that we were building a sequence
 t~1~,t~2~,\... which went on well beyond infinity. It is not hard to see
 that, at least to the point that we took it, this sequence forms a
 well-ordered subset of R (under the usual ordering). Indeed, it is
@@ -495,38 +494,38 @@ order-isomorphic to the set we used to label the sequence - which,
 though we thought of it as mere notation, does come with a natural
 ordering.
 
-With that procedure in the back of our minds, let X be an uncountable
+With that procedure in the back of our minds, let $X$ be an uncountable
 well-ordered set and let us imagine that we have tried to build a
-well-ordered subset T of \[0,1\] indexed by X, so that a typical element
-of T will be written t~x~ for some x in X, and the map x goes to t~x~
+well-ordered subset T of $[0, 1]$ indexed by X, so that a typical element
+of T will be written t~x~ for some $X$ in X, and the map $X$ goes to t~x~
 will be an order-isomorphism.
 
-Now I can make more formal an argument I gave earlier. For every x in X
-there is a *successor* , that is, a least element y of X which is
-greater than x. Since the map x goes to t~x~ is an order-isomorphism,
+Now I can make more formal an argument I gave earlier. For every $X$ in X
+there is a *successor* , that is, a least element y of $X$ which is
+greater than x. Since the map $X$ goes to t~x~ is an order-isomorphism,
 there is no element of t between t~x~ and t~y~. Therefore, that interval
 contains a rational q~x~ and all those rationals are distinct. That
 contradicts the fact that X, and hence T, were supposed to be
 uncountable.
 
-This shows that there is no uncountable well-ordered subset of \[0,1\],
+This shows that there is no uncountable well-ordered subset of $[0, 1]$,
 which means that the \`sequence\' I constructed must eventually come to
 an end - by reaching 1. To make this formal, let us define the sequence
-explicitly as follows. First enumerate all the rationals in \[0,1\].
+explicitly as follows. First enumerate all the rationals in $[0, 1]$.
 Now, if I have defined t~x~ then let y be the successor of x. The first
-basic lemma tells us that there is an s\> x such that f is bounded on
-the interval \[0,s\]. The interval (x,s\] contains many rational
+basic lemma tells us that there is an s\> $X$ such that f is bounded on
+the interval $[0, s]$. The interval (x,s\] contains many rational
 numbers. For the sake of definiteness let t~y~ be the first rational q
 in the enumeration such that f is bounded on the interval \[0,q\]. If y
 is not the successor of any x, then define t~y~ to be the supremum of
-all t~x~ such that x\< y. Since f is bounded up to every t~x~ with x\< y
+all t~x~ such that x< y. Since f is bounded up to every t~x~ with x< y
 and since these get arbitrarily close to t~y~, f is bounded up to t~y~.
 
 As long as t~y~ never equals 1 this defines a unique order isomorphism
-from X into \[0,1\]. (If not, let y be the first element of X where
+from $X$ into $[0, 1]$. (If not, let y be the first element of $X$ where
 anything goes wrong. But I\'ve just shown unambiguously how to define
 t~y~ once I\'ve defined t~x~ for all previous x.) It follows that for
-some y t~y~=1 and this shows that f is bounded on \[0,1\].
+some y t~y~=1 and this shows that f is bounded on $[0, 1]$.
 
 
 
@@ -537,14 +536,14 @@ sets or a countable intersection of open sets, and in general complexity
 at most n if it is a countable union or intersection of sets of
 complexity at most n-1. If in addition the set is not of complexity at
 most n-1 then say that the set is of complexity n. More generally still,
-given an element x of X, say that a set has complexity at most x if it
+given an element $X$ of X, say that a set has complexity at most $X$ if it
 is a countable union or intersection of sets each of which has
 complexity strictly less than x. \[As before, this definition makes
-sense - or there would be a smallest x for which it does not make sense,
+sense - or there would be a smallest $X$ for which it does not make sense,
 which there clearly isn\'t.\]
 
-Let us call an element x in X *countable* if the initial segment I(x) is
-countable. I now claim that every Borel set has complexity x for some
+Let us call an element $X$ in $X$ *countable* if the initial segment I(x) is
+countable. I now claim that every Borel set has complexity $X$ for some
 countable x. Let us say that such a set has *countable complexity* . To
 prove that, all I need to do is show that a countable union or
 intersection of sets of countable complexity also has contable
@@ -553,16 +552,16 @@ unions or intersections, starting with open and closed sets, the result
 will always have countable complexity.
 
 Let A~1~,A~2~,\... be sets with countable complexities x~1~,x~2~,\... .
-I claim first that there is an element x of X that exceeds all of the
+I claim first that there is an element $X$ of $X$ that exceeds all of the
 x~n~. To see this, first note that the union of the sets I(x~n~) is not
-the whole of X, since it is a countable union of countable sets and X is
-uncountable. Now let x be the smallest element of X that belongs to none
+the whole of X, since it is a countable union of countable sets and $X$ is
+uncountable. Now let $X$ be the smallest element of $X$ that belongs to none
 of the intervals I(x~n~). It is possible that x=x~n~ for some n, but we
-can at least say that the successor y of x exceeds every x~n~, from
+can at least say that the successor y of $X$ exceeds every x~n~, from
 which it follows that the union or intersection of the A~n~ has
 complexity at most y.
 
-It is not obvious, but can be shown, that for every countable x in X
+It is not obvious, but can be shown, that for every countable $X$ in X
 there is a Borel set of complexity x. (Earlier we showed this for x=2,
 with an unnecessarily complicated example - the rational numbers is
 another.)
@@ -570,17 +569,17 @@ another.)
 
 
 Using X, we can also measure the complexity of winning strategies for
-player I in open games. By X I now mean the uncountable well-ordered set
+player I in open games. By $X$ I now mean the uncountable well-ordered set
 and not the set of all winning sequences for the first player, which I
 shall call W. All we have to say is that a strategy is of complexity 0
 if every sequence is a win for player 1, that is, if W=N^N^, so that
 player 1 has won before the game even starts. It is of complexity at
-most x if, whatever player 2 plays for the first move, player 1\'s
-strategy is then of complexity at most y for some y\< x. (For example,
+most $X$ if, whatever player 2 plays for the first move, player 1\'s
+strategy is then of complexity at most y for some y< x. (For example,
 it is of complexity at most w if after the first pair of moves player 1
 can declare, for some n, that the game will definitely be won in the
-next n moves.) A strategy has complexity x if it has complexity at most
-x and for no y\< x does it have complexity at most y.
+next n moves.) A strategy has complexity $X$ if it has complexity at most
+x and for no y< $X$ does it have complexity at most y.
 
 Here is a proof that, for every open game, either player 2 has a winning
 strategy or player 1 has a winning strategy of some countable
@@ -591,7 +590,7 @@ this? Well, otherwise player 1 could play some n such that, for every
 possible move m of player 2 there was then a winning strategy f~m~ of
 complexity some countable x~m~. Then the following is a winning strategy
 for player 1: play n and follow with strategy f~m~ if player 2 plays m.
-Since the x~m~ are countable, there is some x in X that exceeds all of
+Since the x~m~ are countable, there is some $X$ in $X$ that exceeds all of
 them, so this strategy has complexity at most x.
 
 This proves my claim that player 2 has a move that ensures that player 1
@@ -617,8 +616,8 @@ is countable ordinals. Here is a definition that will do: a *countable
 ordinal* is an isomorphism class of well-ordered subsets of R. (We
 proved above that every well-ordered subset of R must be countable.)
 What, for example, is w+2? It is the set of all sets of the form
-{t~1~,t~2~,\...,u~1~,u~2~}, where the t~n~ are a bounded increasing
-sequence, and every t~n~ is less than u~1~ which is less than u~2~.
+{t~1~,t~2~,\...,u~1~,u~2~}, where the $t_n$ are a bounded increasing
+sequence, and every $t_n$ is less than u~1~ which is less than u~2~.
 
 How can we now prove that there is an uncountable well-ordered set? All
 we have to do is use ordinals, as just constructed. Let us see why they
@@ -626,7 +625,7 @@ come with a natural well-ordering and why there are uncountably many of
 them.
 
 The ordering is as follows. Write a, b for typical well-ordered subsets
-of R and \[a\], \[b\] for their isomorphism classes. Then \[a\]\<\[b\]
+of R and \[a\], \[b\] for their isomorphism classes. Then \[a\]<\[b\]
 if a is isomorphic to an initial segment of b. Clearly this gives a
 well-defined total ordering. To see that it is a well-ordering, let A be
 a set of ordinals and let \[a\] be an element of A. Then either \[a\] is
@@ -656,8 +655,8 @@ isomorphic to an initial segment of \[a~n~\]. But since a~n~ embeds into
 b via the isomorphism with b~n~ this would show that \[a~n~\] was
 order-isomorphic to a subset of an initial segment I(t) of itself. But
 it is not hard to show that this is impossible. Let f be the supposed
-isomorphism and let s be minimal such that f(s)\< s. (Such an s exists -
-t is an example.) But then f(s)=u for some u\< s and
+isomorphism and let s be minimal such that f(s)< s. (Such an s exists -
+t is an example.) But then f(s)=u for some u< s and
 f(u)[\>]{.underline}u, so f is not order-preserving.
 
 Finally, if \[b\] is at least as big as every \[a~n~\] then the
@@ -672,7 +671,7 @@ Now comes the moment to admit that my \`applications\' of countable
 ordinals were, in a sense, a con. The application to Borel sets wasn\'t
 really solving a problem - it was just classifying the Borel sets in
 quite an interesting way. As for the other two results - that continuous
-functions on \[0,1\] are bounded and that open games are determined - it
+functions on $[0, 1]$ are bounded and that open games are determined - it
 is downright silly to use ordinals for their proofs and very easy to
 remove them. This is almost always true of proofs that use countable
 ordinals. Though there are probably several counterexamples to this
@@ -684,7 +683,7 @@ and even there I am convinced that it exists.
 
 It is a familiar fact about induction that it can be done in two ways.
 Given a sequence of statements P(n), either you prove P(0) and that
-(P(l) for all l\< k) ==\> P(k) or you say, \`Let k be minimal such that
+(P(l) for all l< k) ==\> P(k) or you say, \`Let k be minimal such that
 P(k) is false\' and derive a contradiction. In both cases the actual
 work is the same - you get the contradiction by showing that P(k)
 follows from the truth of all previous P(l), unless k=0 in which case
@@ -692,15 +691,15 @@ you must argue separately.
 
 What we were doing above is very similar to induction except that there
 are two sorts of induction step. The more straightforward one is showing
-that a statement P(y) (for some ordinal y in X) implies P(x), where x is
+that a statement P(y) (for some ordinal y in X) implies P(x), where $X$ is
 the successor of y. The other one is a \`limiting\' stage, where we show
-that if x is not the successor of any y, then we can at least deduce the
-truth of P(x) from the truth of all P(y) for which y\< x.
+that if $X$ is not the successor of any y, then we can at least deduce the
+truth of P(x) from the truth of all P(y) for which y< x.
 
 If P(0) is true and both sorts of induction step are proved, then P(x)
-is true for every x in X. Why? Because if not then there must be some
-minimal x for which P(x) is false. But then either x is the successor of
-y for which P(y) is true, or P(y) is true for every y\< x (in fact, the
+is true for every $X$ in X. Why? Because if not then there must be some
+minimal $X$ for which P(x) is false. But then either $X$ is the successor of
+y for which P(y) is true, or P(y) is true for every y< $X$ (in fact, the
 second statement is enough on its own) and we have a contradiction.
 
 Although induction and picking a minimal counterexample are formally the
@@ -713,7 +712,7 @@ generalized \`ordinal induction\'.
 
 ### Solving problems 1 and 3 without ordinals.
 
-Returning to the proof that continuous functions are bounded on \[0,1\],
+Returning to the proof that continuous functions are bounded on $[0, 1]$,
 here are two ways of removing ordinals. The first is to change slightly
 how I defined the sequence t~x~. If y is the successor of x, a more
 natural way to choose t~y~ is to make it as large as possible, subject
@@ -734,8 +733,8 @@ But once we have noticed this simpler proof, a yet simpler one suggests
 itself. After all, the number 1 was rather arbitrary above. Why not
 simply define t~n+1~ to be as large as possible subject to the
 constraint that f should be bounded on the interval \[t~n~,t~n+1~\]?
-Again, this makes sense. If f is bounded on the interval \[0,s\] for
-every s\< t, then f is bounded on the interval \[0,t\] (since it is
+Again, this makes sense. If f is bounded on the interval $[0, s]$ for
+every s< t, then f is bounded on the interval $[0, t]$ (since it is
 bounded on an interval surrounding t). Setting t~0~=0, what will t~1~
 be? It can\'t be less than 1 because then t~1~ is surrounded by an
 interval on which f is bounded, contradicting maximality. So it\'s 1,
@@ -743,9 +742,9 @@ and there isn\'t even a sequence.
 
 [This is basically the proof I gave in the page on]{#induction}[the
 boundedness of continuous functions on
-\[0,1\]](https://www.dpmms.cam.ac.uk/~wtg10/bounded.html), and it can be
+$[0, 1]$](https://www.dpmms.cam.ac.uk/~wtg10/bounded.html), and it can be
 thought of as looking for a minimal counterexample - focusing on the
-infimum of the set of all t such that f is not bounded on \[0,t\], and
+infimum of the set of all t such that f is not bounded on $[0, t]$, and
 deriving a contradiction. This is not meant as a formal statement, as I
 wasn\'t taking the minimal element of a subset of a well-ordered set,
 and in fact I do not know of a formal procedure for removing ordinals
@@ -800,15 +799,15 @@ been well-ordered in the way specified. Now take the first strategy and
 suppose that it is a strategy for the first player. Run the game with
 the first player using this strategy and the second making some
 arbitrary set of moves. This generates a sequence which we shall place
-outside X (thus ensuring that the second player\'s moves result in a
-sequence not in X and thereby defeat the first strategy.) Now take the
+outside $X$ (thus ensuring that the second player\'s moves result in a
+sequence not in $X$ and thereby defeat the first strategy.) Now take the
 second strategy in the well-ordering. Suppose it is a strategy for the
 second player. Choose arbitrary moves for the first player and run the
 game with this strategy, *except* that the first player\'s moves should
 be chosen in such a way that the resulting sequence is not the same as
 the sequence we first produced. This sequence is easy to avoid, though,
 as there are continuum-many choices for the moves of the first player.
-Having generated the second sequence, put it in X (ensuring now that the
+Having generated the second sequence, put it in $X$ (ensuring now that the
 second strategy is not a winning strategy for the second player).
 
 Continue this way, at each stage taking the minimal strategy (in the
@@ -816,8 +815,8 @@ well-ordering) not yet considered. Since one has at each stage
 constructed strictly fewer than continuum-many sequences, it is easy to
 choose moves for the player playing against the strategy under
 consideration so as to produce an entirely new sequence, which can then
-be placed in or out of X as is appropriate. When all strategies have
-been considered, the remaining sequences can be assigned to X or X^c^
+be placed in or out of $X$ as is appropriate. When all strategies have
+been considered, the remaining sequences can be assigned to $X$ or X^c^
 arbitrarily. And now, in a trivial just-do-it way we have made sure that
 no strategy is a winning strategy.
 
@@ -829,7 +828,7 @@ about ordinals. However, it has a simple and precise answer, one that is
 quite revealing about the abstract method in mathematics.
 
 Why do people say that infinity plus one equals infinity? Presumably
-because if X is an infinite set, y is not in X and Y=X union {y}, then Y
+because if $X$ is an infinite set, y is not in $X$ and Y=X union {y}, then Y
 can be put into one-to-one correspondence with X. Or, even more
 concretely, the natural numbers can be put into one-to-one
 correspondence with the non-negative integers via the map f(n)=n-1. So
