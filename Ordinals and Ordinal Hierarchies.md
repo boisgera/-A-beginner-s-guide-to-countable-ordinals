@@ -16,7 +16,7 @@ When one meets ordinals for the first time in a university course on set
 theory, they can seem quite forbidding. In particular, the notion of a
 transitive set (a set $X$ such that every element of $X$ is also a subset of
 X) takes a little getting used to, and seems rather artificial. In fact,
-it *is* rather artificial - one would like to define an ordinal to be an
+it *is* rather artificial -- one would like to define an ordinal to be an
 equivalence class of well-ordered sets (if you don't know what I mean
 by this, then you can come back to these preliminary remarks after
 reading the explanations below) but this creates difficulties of a
@@ -130,7 +130,7 @@ in such a way that they come in the obvious order
 if and only if $p(n) > q(n)$ for all sufficiently large integers $n$) and such
 that f is bounded on all the intervals $[0,t_{p(\omega)}]$. Then we can apply
 the second basic lemma to the sequence $t_{\omega}$, $t_{\omega^2}$, $t_{\omega^3}$,
-$\dots$ obtaining a limit, which  is called - as you have probably guessed -
+$\dots$ obtaining a limit, which  is called -- as you have probably guessed --
 $t_{\omega^{\omega}}$. I now leave it to you, if you are interested, to work out how
 to continue further, to $t_{\omega^{\omega^{\omega}}}$ and beyond, and then to 
 take a limit $t_{\epsilon_0}$, where $\epsilon_0$ is the standard notation for 
@@ -166,9 +166,9 @@ $2\omega$, $\omega^2$, $\omega^{\omega}$,
 $\epsilon_0$. Given that there are only countably many finite strings of
 symbols, it will not be possible to continue to find an adequate
 notation for uncountably many terms in the sequence (hypothetical terms
-that is - we eventually hope for a contradiction). That does not rule
-out a sort of infinitely long psuedo-notation (such as we use for real
-numbers - it is somehow comforting to write
+that is -- we eventually hope for a contradiction). That does not rule
+out a sort of infinitely long pseudo-notation (such as we use for real
+numbers -- it is somehow comforting to write
 $\pi = 3.14159265358979323846264338327950288\dots$ and imagine the sequence
 going on for ever) but it does suggest that we should not be too
 *reliant* on notation. There is in fact a theorem of logic (whose
@@ -234,7 +234,7 @@ the class of all unions of sets A~1~, A~2~,\... such that A~n~ belongs
 to $u_n$. This is a countable union of sets we have so far built, and
 there is no reason for it to belong to any of the classes $u_n$.
 (Incidentally, I am using the word \`class\' just to distinguish subsets
-of R from sets of subsets of R - not because there is any danger of
+of R from sets of subsets of R -- not because there is any danger of
 running into Russell\'s paradox.)
 
 Now we can let $U_{\omega+1}$ consist of all countable intersections of sets in
@@ -274,7 +274,7 @@ The sketchy argument of the last paragraph doesn\'t work for the
 following reason. What we can deduce from the first player having no
 winning strategy is that, given any strategy, the second player can come
 up with another strategy that defeats it. (This strategy can be very
-simple - something like choose 2 then 8 then 673 then \.... etc.) But
+simple -- something like choose 2 then 8 then 673 then \.... etc.) But
 there is no guarantee that the first player will stick to any one
 strategy.
 
@@ -285,11 +285,11 @@ are trying to do is start from the premise \`For every first-player
 strategy f there is a second-player strategy g that defeats f\' to the
 conclusion \`There is a second-player strategy g that defeats every
 first-player strategy f\'. In other words, we are trying to interchange
-two quantifiers and obtain a g that is *independent* of f - which
+two quantifiers and obtain a g that is *independent* of f -- which
 certainly shouldn\'t be trivial.
 
 With the axiom of choice one can in fact build a game that is not
-determined - using a \`just do it\' proof of a kind explained
+determined -- using a \`just do it\' proof of a kind explained
 [here](https://www.dpmms.cam.ac.uk/~wtg10/justdoit.html). The proof
 depends on well-orderings so I will give it [later on](#undetermined).
 
@@ -462,7 +462,7 @@ where A is a set, can be well-ordered, and the object {{A}:A is a set}
 is too big to be a set. Anyhow, in the back of our minds is the idea
 that the *order type* of a well-ordered set is the isomorphism class of
 that set, but the difficulty just mentioned forces us to define it
-differently - by picking a representative from each class. That is,
+differently -- by picking a representative from each class. That is,
 we\'d like to choose a whole lot of well-ordered sets in such a way that
 every well-ordered set is order-isomorphic to exactly one of our special
 ones. We will call them 1,2,3,\...,w,$\omega+1$,\.... etc. and the general name
@@ -472,7 +472,7 @@ How to use ordinals {#using}
 --------------------------------------------------------------------------------
 
 Let us think once again about the three problems we were grappling with
-earlier. What we were looking for was an *indexing set* - that is, a set
+earlier. What we were looking for was an *indexing set* -- that is, a set
 X which we could use to label the terms of an infinite list, or rather
 something like a list. In each case, although the list would sometimes
 go on for ever but still not have finished, we could at any stage talk
@@ -493,7 +493,7 @@ $[0, 1]$ are bounded. Recall that we were building a sequence
 t~1~,t~2~,\... which went on well beyond infinity. It is not hard to see
 that, at least to the point that we took it, this sequence forms a
 well-ordered subset of R (under the usual ordering). Indeed, it is
-order-isomorphic to the set we used to label the sequence - which,
+order-isomorphic to the set we used to label the sequence -- which,
 though we thought of it as mere notation, does come with a natural
 ordering.
 
@@ -513,7 +513,7 @@ uncountable.
 
 This shows that there is no uncountable well-ordered subset of $[0, 1]$,
 which means that the "sequence" I constructed must eventually come to
-an end - by reaching 1. To make this formal, let us define the sequence
+an end -- by reaching 1. To make this formal, let us define the sequence
 explicitly as follows. First enumerate all the rationals in $[0, 1]$.
 Now, if I have defined t~x~ then let y be the successor of x. The first
 basic lemma tells us that there is an s\> $X$ such that f is bounded on
@@ -542,7 +542,7 @@ most n-1 then say that the set is of complexity n. More generally still,
 given an element $X$ of X, say that a set has complexity at most $X$ if it
 is a countable union or intersection of sets each of which has
 complexity strictly less than x. \[As before, this definition makes
-sense - or there would be a smallest $X$ for which it does not make sense,
+sense -- or there would be a smallest $X$ for which it does not make sense,
 which there clearly isn\'t.\]
 
 Let us call an element $X$ in $X$ *countable* if the initial segment I(x) is
@@ -566,7 +566,7 @@ complexity at most y.
 
 It is not obvious, but can be shown, that for every countable $X$ in X
 there is a Borel set of complexity x. (Earlier we showed this for x=2,
-with an unnecessarily complicated example - the rational numbers is
+with an unnecessarily complicated example -- the rational numbers is
 another.)
 
 
@@ -604,9 +604,9 @@ in particular never wins the game (or else the complexity would be
 zero). If player 2 plays like this, the result will be some infinite
 sequence (n~1~,n~2~,n~3~,\...). If it belonged to W, then there would be
 some k such that all sequences beginning (n~1~,n~2~,\...,n~k~) were also
-in W - by the definition of an open game. But this contradicts the fact
+in W -- by the definition of an open game. But this contradicts the fact
 that player 1 never wins. Hence, player 2 has a way of ensuring that the
-game results in a sequence not in W - that is, has a winning strategy.
+game results in a sequence not in W -- that is, has a winning strategy.
 
 
 Proof that there is an uncountable well-ordered set {#uncountablewoset}
@@ -638,7 +638,7 @@ that t is minimized (which can be done as a is a well-ordered set of
 reals). Then \[b\] must be a minimal element of A.
 
 Now let us prove that there are uncountably many countable ordinals.
-(There is no paradox here - just as it is not paradoxical that there are
+(There is no paradox here -- just as it is not paradoxical that there are
 infinitely many finite numbers.) If there were countably many, then we
 could write them as \[a~1~\],\[a~2~\],\... . Now it is easy to construct
 an order-preserving bijection from R to the open interval (-1,1)
@@ -648,7 +648,7 @@ well-ordered subset of (c,d) that is isomorphic to a.
 
 We can therefore build a set as follows. For each n let b~n~ be an
 isomorphic copy of a~n~ that lives in the interval (n-1,n) and let b the
-the union of the b~n~. It is easy to see that b is well-ordered - given
+the union of the b~n~. It is easy to see that b is well-ordered -- given
 any non-empty subset first find the minimal n such that it intersects
 (n-1,n) and then find the minimal element of that intersection.
 
@@ -672,9 +672,9 @@ How not to use ordinals {#notusing}
 
 Now comes the moment to admit that my \`applications\' of countable
 ordinals were, in a sense, a con. The application to Borel sets wasn\'t
-really solving a problem - it was just classifying the Borel sets in
-quite an interesting way. As for the other two results - that continuous
-functions on $[0, 1]$ are bounded and that open games are determined - it
+really solving a problem -- it was just classifying the Borel sets in
+quite an interesting way. As for the other two results -- that continuous
+functions on $[0, 1]$ are bounded and that open games are determined -- it
 is downright silly to use ordinals for their proofs and very easy to
 remove them. This is almost always true of proofs that use countable
 ordinals. Though there are probably several counterexamples to this
@@ -688,7 +688,7 @@ It is a familiar fact about induction that it can be done in two ways.
 Given a sequence of statements P(n), either you prove P(0) and that
 (P(l) for all l< k) ==\> P(k) or you say, \`Let k be minimal such that
 P(k) is false\' and derive a contradiction. In both cases the actual
-work is the same - you get the contradiction by showing that P(k)
+work is the same -- you get the contradiction by showing that P(k)
 follows from the truth of all previous P(l), unless k=0 in which case
 you must argue separately.
 
@@ -720,12 +720,12 @@ here are two ways of removing ordinals. The first is to change slightly
 how I defined the sequence t~x~. If y is the successor of x, a more
 natural way to choose t~y~ is to make it as large as possible, subject
 to the constraint that \|f(s)-f(t~x~)\| should be at most 1 for every s
-in the interval \[t~x~,t~y~\]. Luckily, this makes sense - the set of
+in the interval \[t~x~,t~y~\]. Luckily, this makes sense -- the set of
 all numbers satisfying the constraint attains its upper bound. Now
 suppose we generate the sequence t~1~,t~2~,\... in this way. Then either
 it reaches 1 or it converges to some limit t. But there is an interval
 about t in which f oscillates by at most 1/2, and that interval must
-contain some t~n~, which proves that t~n+1~ is bigger than t - a
+contain some t~n~, which proves that t~n+1~ is bigger than t -- a
 contradiction.
 
 In other words, it was only because of a perverse definition of t~y~
@@ -746,7 +746,7 @@ and there isn\'t even a sequence.
 [This is basically the proof I gave in the page on]{#induction}[the
 boundedness of continuous functions on
 $[0, 1]$](https://www.dpmms.cam.ac.uk/~wtg10/bounded.html), and it can be
-thought of as looking for a minimal counterexample - focusing on the
+thought of as looking for a minimal counterexample -- focusing on the
 infimum of the set of all t such that f is not bounded on $[0, t]$, and
 deriving a contradiction. This is not meant as a formal statement, as I
 wasn\'t taking the minimal element of a subset of a well-ordered set,
