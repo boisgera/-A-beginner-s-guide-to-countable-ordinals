@@ -62,18 +62,18 @@ union of all those intervals).
 
 Since the $t_n$ all live in $[0, 1]$, they form a monotonic sequence which
 is bounded above. Hence, they converge to some limit, which, with the
-considerable benefit of hindsight, I shall call $t_w$, where the $w$ should
-be read as "$\omega$". By continuity, there is some interval around $t_w$
-on which $f$ is bounded. Since this interval contains $t_n$ for all
-sufficiently large n, we can deduce that f is bounded all the way to
-$t_w$. Thus, $f$ *was* bounded on the union of the intervals $[0, t_n]$,
+considerable benefit of hindsight, I shall call $t_{\omega}$. 
+By continuity, there is some interval around $t_{\omega}$ on which $f$ is 
+bounded. Since this interval contains $t_n$ for all
+sufficiently large $n$, we can deduce that f is bounded all the way to
+$t_{\omega}$. Thus, $f$ *was* bounded on the union of the intervals $[0, t_n]$,
 though what we have now proved is very slightly stronger as it includes
-the end point $t_w$.
+the end point $t_{\omega}$.
 
 Now we can continue the sequence "beyond infinity" by using the basic
-lemma repeatedly, starting at $t_w$. This gives us a second sequence
-$t_w < t_{w+1} < t_{w+2} < \dots$ such that $f$ is bounded on the interval
-$[0,t_{w+n}]$ for every $n$.
+lemma repeatedly, starting at $t_{\omega}$. This gives us a second sequence
+$t_{\omega} < t_{\omega+1} < t_{\omega+2} < \dots$ such that $f$ is bounded on the interval
+$[0,t_{\omega+n}]$ for every $n$.
 
 It may look as though there is something not quite rigorous going on
 here. If you think of w as being infinity (as it is quite reasonable to
@@ -81,74 +81,76 @@ do) then is it legitimate to start adding $1,2,3,\dots$ to it? Doesn't
 infinity plus one equal infinity?
 
 I shall return to this question, but for the time being let me say only
-this: there is nothing to stop me using expressions like $w+17$ if all I
-do is regard them as *notation* . Instead of writing $t_{w+n}$ I could have
+this: there is nothing to stop me using expressions like $\omega+17$ if all I
+do is regard them as *notation* . Instead of writing $t_{\omega+n}$ I could have
 written $u_n$. Or I could have written $t_{0n}$ for $t_n$ and then $t_{1n}$ for
-$t_{w+n}$.
+$t_{\omega+n}$.
 
 Thus reassured, let us continue. By the same argument as before, the
-sequence $(t_{w+n})$ converges, and it feels natural to write $t_{2w}$ for its
-limit. Again, as before, $f$ is bounded on the interval $[0,t_{2w}]$.
+sequence $(t_{\omega+n})$ converges, and it feels natural to write $t_{2\omega}$ 
+for its limit. Again, as before, $f$ is bounded on the interval $[0,t_{2\omega}]$.
 
 Now we can continue the sequence – or perhaps one should say generalized
-sequence – with $t_{2w+1}$, $t_{2w+2}$ and so on. These converge to a number
-we can call $t_{3w}$, and if we keep on going we will end up producing, for
-every $m> 0$ and $n > 0$, a number $t_{mw+n}$ (I shall interpret $t_0$ as $0$)
-such that $f$ is bounded on the interval $[0,t_{mw+n}]$. Furthermore,
-$t_{mw+n}$ will be greater than $t_{kw+l}$ if and only if $m > k$ or $m=k$ and 
-$n > l$.
+sequence – with $t_{2\omega+1}$, $t_{2\omega+2}$ and so on. These converge to a 
+number we can call $t_{3\omega}$, and if we keep on going we will end up 
+producing, for every $m> 0$ and $n > 0$, a number $t_{m\omega+n}$ 
+(I shall interpret $t_0$ as $0$) such that $f$ is bounded on the interval 
+$[0,t_{m\omega+n}]$. Furthermore, $t_{m\omega+n}$ will be greater than 
+$t_{k\omega+l}$ if and only if $m > k$ or $m=k$ and $n > l$.
 
 What can we say now? What if none of these numbers is bigger than $1/100$,
 as may well be the case? Well, we are not forced to stop, because we
-could consider the increasing sequence $t_w, t_{2w}, t_{3w},\dots$ . This
-has a limit, which is easily seen to be bigger than any of the numbers
-$t_{mw+n}$, and what\'s more there is a natural name for this limit –
-$t_{w^2}$. Once again, $f$ will be bounded on the interval $[0,t_{w^2}]$.
+could consider the increasing sequence $t_{\omega}, t_{2\omega}, t_{3\omega},
+\dots$ . This has a limit, which is easily seen to be bigger than any of the 
+numbers $t_{m\omega+n}$, and what\'s more there is a natural name for this limit
+– $t_{\omega^2}$. Once again, $f$ will be bounded on the interval 
+$[0,t_{\omega^2}]$.
 
 For convenience, let me state and prove a **second basic lemma** , the
 one that we use for limits of sequences. It says that if we have an
-increasing sequence of numbers u~1~, u~2~,\... in $[0, 1]$ and if f is a
-continuous function that is bounded on the interval \[0,u~n~\] for every
-n, then the u~n~ converge to a limit u and f is bounded on the interval
-\[0,u\].
+increasing sequence of numbers $u_1$, $u_2$,\... in $[0, 1]$ and if f is a
+continuous function that is bounded on the interval $[0,u_n]$ for every
+$n$, then the $u_n$ converge to a limit u and f is bounded on the interval
+$[0,u]$.
 
-The fact that the u~n~ converge is just the monotone-sequences axiom for
-the real numbers. As for the boundedness of f on \[0,u\], I proved it
+The fact that the $u_n$ converge is just the monotone-sequences axiom for
+the real numbers. As for the boundedness of f on $[0, u]$, I proved it
 earlier, but let me repeat the argument. By continuity, f is bounded in
-some interval about u. This interval contains u~n~ for all sufficiently
-large n, and in particular for *some* n. Hence, putting together the
-interval \[0,u~n~\] and the interval surrounding u, we find that f is
-bounded on \[0,u\].
+some interval about u. This interval contains $u_n$ for all sufficiently
+large $n$, and in particular for *some* $n$. Hence, putting together the
+interval $[0,u_n]$ and the interval surrounding $u$, we find that $f$ is
+bounded on $[0, u]$.
 
 Now that I have gone this far, it should be clear how to continue,
-obtaining numbers t~lw^2^+mw+n~ for any l,m,n\> 0. And, of course, this
-is still not the end. One can construct t~p(w)~ for any polynomial p
+obtaining numbers $t_{l\omega^2+m\omega+n}$ for any $l,m,n > 0$. 
+And, of course, thisis still not the end. One can construct $t_{p(\omega)}$ 
+for any polynomial p
 with positive integer coefficients, in such a way that they come in the
-obvious order (a neat way to describe it is that t~p(w)~\> t~q(w)~ if
-and only if p(n)\> q(n) for all sufficiently large integers n) and such
-that f is bounded on all the intervals \[0,t~p(w)~\]. Then we can apply
-the second basic lemma to the sequence $t_w$, t~w^2^~, t~w^3^~,\...
-obtaining a limit, which is called - as you have probably guessed -
-t~w^w^~. I now leave it to you, if you are interested, to work out how
-to continue further, to t~w^w^w^^~ and beyond, and then to take a limit
-t~epsilon~0~~, where epsilon~0~ is the standard notation for what one
-might otherwise call omega to the omega to the omega to the omega to the
-\.... and so on.
+obvious order (a neat way to describe it is that $t_{p(\omega)} > t_{q(\omega)}$ 
+if and only if $p(n) > q(n)$ for all sufficiently large integers $n$) and such
+that f is bounded on all the intervals $[0,t_{p(\omega)}]$. Then we can apply
+the second basic lemma to the sequence $t_{\omega}$, $t_{\omega^2}, $t_{\omega^3}$,
+$\dots$ obtaining a limit, which  is called - as you have probably guessed -
+$t^{w^w}$. I now leave it to you, if you are interested, to work out how
+to continue further, to $t^{w^w^w} and beyond, and then to take a limit
+$t_{\epsilon_0}$, where $\epsilon_0$ is the standard notation for what one
+might otherwise call omega to the omega to the omega to the omega to the... 
+and so on.
 
 What is the point of all this? There is nothing to force even
-t~epsilon~0~~ to be close to 1, and it begins to look as though, however
+$t_{\epsilon_0}$ to be close to $1$, and it begins to look as though, however
 ingenious we are in extending our notation in order to lengthen the
-\`sequence\', we will never manage to reach 1 and hence never prove the
+"sequence", we will never manage to reach $1$ and hence never prove the
 theorem.
 
 Is it conceivable that we could go *so far* with the process that we
-eventually succeeded in forcing the \`sequence\' to go beyond 1? In one
+eventually succeeded in forcing the "sequence" to go beyond $1$? In one
 way the answer is yes, and in another it is no.
 
 The following observation gives us cause for optimism. If we could
 explain how to extend the sequence *uncountably* many times, then we
 would have proved the theorem. That is because every number in the
-\`sequence\' is followed by an open interval that contains no others,
+"sequence" is followed by an open interval that contains no others,
 and these open intervals are disjoint. Since any open interval contains
 a rational number, there can be at most countably many of them. This
 would give us a contradiction, deduced from the assumption that we never
@@ -159,7 +161,7 @@ On the other hand, a second observation should give us pause for
 thought. If you look at the discussion above, you will see that at
 various points I had to make a \`notational leap\'. Each of the
 following symbols required of me a small explanation, after which it
-became obvious for a while how to proceed: w, w+1, 2w, w^2^, w^w^,
+became obvious for a while how to proceed: w, \omega+1, 2\omega, w^2^, w^w^,
 epsilon~0~. Given that there are only countably many finite strings of
 symbols, it will not be possible to continue to find an adequate
 notation for uncountably many terms in the sequence (hypothetical terms
@@ -215,26 +217,26 @@ simply than that.
 
 Returning to more general Borel sets, let us think what a typical Borel
 set might look like. Let U ~0~ be the class of all open sets, and let
-U~1~ consist of all intersections of countably many sets in U~0~. We
+$u_1$ consist of all intersections of countably many sets in U~0~. We
 cannot produce more sets by taking countable intersections of sets in
-U~1~ (since such sets will themselves belong to U~1~) but there is no
-guarantee that a countable *union* of sets in U~1~ will belong to U~1~.
+$u_1$ (since such sets will themselves belong to $u_1$) but there is no
+guarantee that a countable *union* of sets in $u_1$ will belong to $u_1$.
 In fact, examples can be constructed that don't.
 
-We can therefore define U~2~ to be the class of all countable unions of
-sets in U~1~, and in general can define U~n~ to be the set of all
+We can therefore define $u_2$ to be the class of all countable unions of
+sets in $u_1$, and in general can define $u_n$ to be the set of all
 countable unions/intersections of sets in U~n-1~ according to whether n
 is even/odd.
 
 Does the process stop there? Not at all. We can then define U~w~ to be
 the class of all unions of sets A~1~, A~2~,\... such that A~n~ belongs
-to U~n~. This is a countable union of sets we have so far built, and
-there is no reason for it to belong to any of the classes U~n~.
+to $u_n$. This is a countable union of sets we have so far built, and
+there is no reason for it to belong to any of the classes $u_n$.
 (Incidentally, I am using the word \`class\' just to distinguish subsets
 of R from sets of subsets of R - not because there is any danger of
 running into Russell\'s paradox.)
 
-Now we can let U~w+1~ consist of all countable intersections of sets in
+Now we can let U~\omega+1~ consist of all countable intersections of sets in
 U~w~, and so on. In fact, just as with Problem 1, one ends up with a
 hierarchy that goes well beyond infinity, and about which it gradually
 becomes harder and harder to speak. I leave it to the reader to work out
@@ -331,18 +333,18 @@ complexity is 0 if player 1 wins no matter what happens and complexity n
 if after both players have moved once the complexity of the resulting
 position is n-1. We can then say that a game has complexity w if after
 the first moves the resulting position has complexity n for *some* n.
-Next, it has complexity w+n if after the first moves the resulting
-position has complexity w+n-1.
+Next, it has complexity \omega+n if after the first moves the resulting
+position has complexity \omega+n-1.
 
 Just to illustrate this: the first game above has complexity 300 and the
-second has complexity w+4. To see why the second statement is true,
+second has complexity \omega+4. To see why the second statement is true,
 notice that on the fifth pair of moves the second player will be forced
 to decide on n~10~ after which the length of the game will be known and
 hence the complexity will be some positive integer.
 
-A game has complexity 2w if after the first move the resulting position
-has complexity w+n for some n. It has complexity w^2^ if after the first
-move the game has complexity aw+b for some a,b. (When I say \`has
+A game has complexity 2\omega if after the first move the resulting position
+has complexity \omega+n for some n. It has complexity w^2^ if after the first
+move the game has complexity a\omega+b for some a,b. (When I say \`has
 complexity \...\' I mean \`has complexity no worse than \...\'.) It has
 complexity w^w^ if after the first move the game has complexity some
 polynomial in w.
@@ -359,11 +361,11 @@ be until\'\'.\' I leave it to the reader to give an intuitive
 description of games of complexity w^w^.
 
 Before moving on, let us see why every game of complexity w^2^ is
-determined. I shall assume that every game of complexity mw+n is
+determined. I shall assume that every game of complexity m\omega+n is
 determined (as an inductive hypothesis). If player 2 has no winning
 strategy, there must be some first move for player 1 such that player 2
 still has no winning strategy. After they have both had their first
-turn, the position is a game of complexity mw+n for some m,n, and is
+turn, the position is a game of complexity m\omega+n for some m,n, and is
 therefore determined. Since player 2 does not have a winning strategy,
 player 1 must. But this gives player 1 a strategy for the whole game -
 do that first move and then apply whatever winning strategy is
@@ -445,8 +447,8 @@ some of the elements of a well-ordered set X. We could call the first
 element 1, the next 2, the next 3 and so on. (I can always talk about
 \`the next\': it just means the minimal element not yet mentioned.) If
 I\'ve gone through all the natural numbers and still haven\'t included
-all of X, then I\'ll call the next element w, the next w+1 and so on.
-Then after those I\'ll have 2w, 2w+1 and so on. Then 3w, 4w,\...
+all of X, then I\'ll call the next element w, the next \omega+1 and so on.
+Then after those I\'ll have 2\omega, 2\omega+1 and so on. Then 3\omega, 4w,\...
 w^2^,..,w^w^,\...,w^w^w^^,\..., epsilon~0~,\... . I didn\'t mention
 earlier that there are also epsilon~1~, epsilon~2~, \.... ,
 epsilon~w~,\...,epsilon~epsilon~0~~,\... and even
@@ -462,7 +464,7 @@ that set, but the difficulty just mentioned forces us to define it
 differently - by picking a representative from each class. That is,
 we\'d like to choose a whole lot of well-ordered sets in such a way that
 every well-ordered set is order-isomorphic to exactly one of our special
-ones. We will call them 1,2,3,\...,w,w+1,\.... etc. and the general name
+ones. We will call them 1,2,3,\...,w,\omega+1,\.... etc. and the general name
 for them will be ordinals.
 
 How to use ordinals {#using}
@@ -509,7 +511,7 @@ contradicts the fact that X, and hence T, were supposed to be
 uncountable.
 
 This shows that there is no uncountable well-ordered subset of $[0, 1]$,
-which means that the \`sequence\' I constructed must eventually come to
+which means that the "sequence" I constructed must eventually come to
 an end - by reaching 1. To make this formal, let us define the sequence
 explicitly as follows. First enumerate all the rationals in $[0, 1]$.
 Now, if I have defined t~x~ then let y be the successor of x. The first
@@ -615,9 +617,9 @@ considerations forbade this. This problem can be avoided if all we need
 is countable ordinals. Here is a definition that will do: a *countable
 ordinal* is an isomorphism class of well-ordered subsets of R. (We
 proved above that every well-ordered subset of R must be countable.)
-What, for example, is w+2? It is the set of all sets of the form
-{t~1~,t~2~,\...,u~1~,u~2~}, where the $t_n$ are a bounded increasing
-sequence, and every $t_n$ is less than u~1~ which is less than u~2~.
+What, for example, is \omega+2? It is the set of all sets of the form
+{t~1~,t~2~,\...,$u_1$,$u_2$}, where the $t_n$ are a bounded increasing
+sequence, and every $t_n$ is less than $u_1$ which is less than $u_2$.
 
 How can we now prove that there is an uncountable well-ordered set? All
 we have to do is use ordinals, as just constructed. Let us see why they
