@@ -102,7 +102,7 @@ What can we say now? What if none of these numbers is bigger than $1/100$,
 as may well be the case? Well, we are not forced to stop, because we
 could consider the increasing sequence $t_{\omega}, t_{2\omega}, t_{3\omega},
 \dots$ . This has a limit, which is easily seen to be bigger than any of the 
-numbers $t_{m\omega+n}$, and what\'s more there is a natural name for this limit
+numbers $t_{m\omega+n}$, and what's more there is a natural name for this limit
 – $t_{\omega^2}$. Once again, $f$ will be bounded on the interval 
 $[0,t_{\omega^2}]$.
 
@@ -124,18 +124,18 @@ bounded on $[0, u]$.
 Now that I have gone this far, it should be clear how to continue,
 obtaining numbers $t_{l\omega^2+m\omega+n}$ for any $l,m,n > 0$. 
 And, of course, thisis still not the end. One can construct $t_{p(\omega)}$ 
-for any polynomial p
-with positive integer coefficients, in such a way that they come in the
-obvious order (a neat way to describe it is that $t_{p(\omega)} > t_{q(\omega)}$ 
+for any polynomial $p$ with positive integer coefficients, 
+in such a way that they come in the obvious order 
+(a neat way to describe it is that $t_{p(\omega)} > t_{q(\omega)}$ 
 if and only if $p(n) > q(n)$ for all sufficiently large integers $n$) and such
 that f is bounded on all the intervals $[0,t_{p(\omega)}]$. Then we can apply
-the second basic lemma to the sequence $t_{\omega}$, $t_{\omega^2}, $t_{\omega^3}$,
+the second basic lemma to the sequence $t_{\omega}$, $t_{\omega^2}$, $t_{\omega^3}$,
 $\dots$ obtaining a limit, which  is called - as you have probably guessed -
-$t^{w^w}$. I now leave it to you, if you are interested, to work out how
-to continue further, to $t^{w^w^w} and beyond, and then to take a limit
-$t_{\epsilon_0}$, where $\epsilon_0$ is the standard notation for what one
-might otherwise call omega to the omega to the omega to the omega to the... 
-and so on.
+$t_{\omega^{\omega}}$. I now leave it to you, if you are interested, to work out how
+to continue further, to $t_{\omega^{\omega^{\omega}}}$ and beyond, and then to 
+take a limit $t_{\epsilon_0}$, where $\epsilon_0$ is the standard notation for 
+what one might otherwise call $\omega$ to the $\omega$ to the $\omega$ to the 
+$\omega$ to the... and so on.
 
 What is the point of all this? There is nothing to force even
 $t_{\epsilon_0}$ to be close to $1$, and it begins to look as though, however
@@ -159,16 +159,17 @@ the process of extending uncountably many times.
 
 On the other hand, a second observation should give us pause for
 thought. If you look at the discussion above, you will see that at
-various points I had to make a \`notational leap\'. Each of the
+various points I had to make a "notational leap". Each of the
 following symbols required of me a small explanation, after which it
-became obvious for a while how to proceed: w, \omega+1, 2\omega, w^2^, w^w^,
-epsilon~0~. Given that there are only countably many finite strings of
+became obvious for a while how to proceed: $\omega$, $\omega+1$, 
+$2\omega$, $\omega^2$, $\omega^{\omega}$,
+$\epsilon_0$. Given that there are only countably many finite strings of
 symbols, it will not be possible to continue to find an adequate
 notation for uncountably many terms in the sequence (hypothetical terms
 that is - we eventually hope for a contradiction). That does not rule
 out a sort of infinitely long psuedo-notation (such as we use for real
 numbers - it is somehow comforting to write
-pi=3.14159265358979323846264338327950288\.... and imagine the sequence
+$\pi = 3.14159265358979323846264338327950288\dots$ and imagine the sequence
 going on for ever) but it does suggest that we should not be too
 *reliant* on notation. There is in fact a theorem of logic (whose
 precise statement, alas, I do not know) which says something like that
@@ -236,7 +237,7 @@ there is no reason for it to belong to any of the classes $u_n$.
 of R from sets of subsets of R - not because there is any danger of
 running into Russell\'s paradox.)
 
-Now we can let U~\omega+1~ consist of all countable intersections of sets in
+Now we can let $U_{\omega+1}$ consist of all countable intersections of sets in
 U~w~, and so on. In fact, just as with Problem 1, one ends up with a
 hierarchy that goes well beyond infinity, and about which it gradually
 becomes harder and harder to speak. I leave it to the reader to work out
@@ -333,18 +334,18 @@ complexity is 0 if player 1 wins no matter what happens and complexity n
 if after both players have moved once the complexity of the resulting
 position is n-1. We can then say that a game has complexity w if after
 the first moves the resulting position has complexity n for *some* n.
-Next, it has complexity \omega+n if after the first moves the resulting
-position has complexity \omega+n-1.
+Next, it has complexity $\omega+n$ if after the first moves the resulting
+position has complexity $\omega+n-1$.
 
 Just to illustrate this: the first game above has complexity 300 and the
-second has complexity \omega+4. To see why the second statement is true,
+second has complexity $\omega+4$. To see why the second statement is true,
 notice that on the fifth pair of moves the second player will be forced
 to decide on n~10~ after which the length of the game will be known and
 hence the complexity will be some positive integer.
 
-A game has complexity 2\omega if after the first move the resulting position
-has complexity \omega+n for some n. It has complexity w^2^ if after the first
-move the game has complexity a\omega+b for some a,b. (When I say \`has
+A game has complexity $2\omega$ if after the first move the resulting position
+has complexity \$omega+n$ for some n. It has complexity w^2^ if after the first
+move the game has complexity $a\omega+b$ for some $a, b$. (When I say \`has
 complexity \...\' I mean \`has complexity no worse than \...\'.) It has
 complexity w^w^ if after the first move the game has complexity some
 polynomial in w.
@@ -361,11 +362,11 @@ be until\'\'.\' I leave it to the reader to give an intuitive
 description of games of complexity w^w^.
 
 Before moving on, let us see why every game of complexity w^2^ is
-determined. I shall assume that every game of complexity m\omega+n is
+determined. I shall assume that every game of complexity $m\omega+n$ is
 determined (as an inductive hypothesis). If player 2 has no winning
 strategy, there must be some first move for player 1 such that player 2
 still has no winning strategy. After they have both had their first
-turn, the position is a game of complexity m\omega+n for some m,n, and is
+turn, the position is a game of complexity $m\omega+n$ for some $m,n$, and is
 therefore determined. Since player 2 does not have a winning strategy,
 player 1 must. But this gives player 1 a strategy for the whole game -
 do that first move and then apply whatever winning strategy is
@@ -447,8 +448,8 @@ some of the elements of a well-ordered set X. We could call the first
 element 1, the next 2, the next 3 and so on. (I can always talk about
 \`the next\': it just means the minimal element not yet mentioned.) If
 I\'ve gone through all the natural numbers and still haven\'t included
-all of X, then I\'ll call the next element w, the next \omega+1 and so on.
-Then after those I\'ll have 2\omega, 2\omega+1 and so on. Then 3\omega, 4w,\...
+all of X, then I\'ll call the next element w, the next $\omega+1$ and so on.
+Then after those I\'ll have $2\omega$, $2\omega+1$ and so on. Then $3\omega$, 4w,\...
 w^2^,..,w^w^,\...,w^w^w^^,\..., epsilon~0~,\... . I didn\'t mention
 earlier that there are also epsilon~1~, epsilon~2~, \.... ,
 epsilon~w~,\...,epsilon~epsilon~0~~,\... and even
@@ -464,7 +465,7 @@ that set, but the difficulty just mentioned forces us to define it
 differently - by picking a representative from each class. That is,
 we\'d like to choose a whole lot of well-ordered sets in such a way that
 every well-ordered set is order-isomorphic to exactly one of our special
-ones. We will call them 1,2,3,\...,w,\omega+1,\.... etc. and the general name
+ones. We will call them 1,2,3,\...,w,$\omega+1$,\.... etc. and the general name
 for them will be ordinals.
 
 How to use ordinals {#using}
@@ -617,7 +618,7 @@ considerations forbade this. This problem can be avoided if all we need
 is countable ordinals. Here is a definition that will do: a *countable
 ordinal* is an isomorphism class of well-ordered subsets of R. (We
 proved above that every well-ordered subset of R must be countable.)
-What, for example, is \omega+2? It is the set of all sets of the form
+What, for example, is $\omega+2$? It is the set of all sets of the form
 {t~1~,t~2~,\...,$u_1$,$u_2$}, where the $t_n$ are a bounded increasing
 sequence, and every $t_n$ is less than $u_1$ which is less than $u_2$.
 
