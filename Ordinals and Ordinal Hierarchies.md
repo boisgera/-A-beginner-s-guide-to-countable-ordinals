@@ -6,17 +6,17 @@ author:
 
 ### Prerequisites
 
-It would help to know basic real analysis, up to the definition of open
-and closed sets. But even without this, it might be possible to
+It would help to know basic real analysis, up to the definition of open and 
+closed sets. But even without this, it might be possible to
 understand the general discussion and at least one of the examples.
 
 ### Contents
 
-When one meets ordinals for the first time in a university course on set
-theory, they can seem quite forbidding. In particular, the notion of a
+When one meets ordinals for the first time in a university course on set theory, 
+they can seem quite forbidding. In particular, the notion of a
 transitive set (a set $X$ such that every element of $X$ is also a subset of
-X) takes a little getting used to, and seems rather artificial. In fact,
-it *is* rather artificial -- one would like to define an ordinal to be an
+$X$) takes a little getting used to, and seems rather artificial. 
+In fact, it *is* rather artificial -- one would like to define an ordinal to be an
 equivalence class of well-ordered sets (if you don't know what I mean
 by this, then you can come back to these preliminary remarks after
 reading the explanations below) but this creates difficulties of a
@@ -45,43 +45,44 @@ ordinals. I have therefore given various opportunities for the reader to
 jump to the end of the section and start reading the more general
 theory. The first one is [now](#wosets).
 
-### Problem 1. Showing that a continuous function on $[0,1]$ is bounded.
+### Problem 1. Showing that a continuous function on $[0,1]$ is bounded
 
-I have discussed this problem in detail on a [different
-page](https://www.dpmms.cam.ac.uk/~wtg10/bounded.html). Here I shall be
-a little briefer about the real analysis but much more detailed about
-the aspect of the problem that relates to ordinals.
+I have discussed this problem in detail on a [different page][bounded]. 
+Here I shall be a little briefer about the real analysis 
+but much more detailed about the aspect of the problem that relates to ordinals.
 
-If f is continuous on $[0, 1]$ and bounded on $[0, t]$, then, by
-continuity at $t$, one can find $s>t$ such that f is bounded on the
-interval $[0, s]$. Let us call this the **basic lemma** . Using the basic
-lemma repeatedly, one can build a sequence of numbers $0 < t_1 < t_2 <
-t_3 < \dots$ in such a way that f is bounded on the interval $[0, t_n]$
-for every $n$ (though so far we do not know whether f is bounded on the
-union of all those intervals).
+[bounded]: https://www.dpmms.cam.ac.uk/~wtg10/bounded.html
+
+If $f$ is continuous on $[0, 1]$ and bounded on $[0, t]$, then, by
+continuity at $t$, one can find $s>t$ such that $f$ is bounded on the
+interval $[0, s]$. Let us call this the **basic lemma** . 
+Using the basic lemma repeatedly, one can build a sequence of numbers 
+$0 < t_1 < t_2 < t_3 < \dots$ in such a way that $f$ is bounded on the interval 
+$[0, t_n]$ for every $n$ (though so far we do not know whether $f$ is bounded 
+on the union of all those intervals).
 
 Since the $t_n$ all live in $[0, 1]$, they form a monotonic sequence which
 is bounded above. Hence, they converge to some limit, which, with the
 considerable benefit of hindsight, I shall call $t_{\omega}$. 
-By continuity, there is some interval around $t_{\omega}$ on which $f$ is 
-bounded. Since this interval contains $t_n$ for all
-sufficiently large $n$, we can deduce that f is bounded all the way to
-$t_{\omega}$. Thus, $f$ *was* bounded on the union of the intervals $[0, t_n]$,
+By continuity, there is some interval around $t_{\omega}$ on which $f$ is bounded. 
+Since this interval contains $t_n$ for all sufficiently large $n$, 
+we can deduce that $f$ is bounded all the way to $t_{\omega}$. 
+Thus, $f$ *was* bounded on the union of the intervals $[0, t_n]$,
 though what we have now proved is very slightly stronger as it includes
 the end point $t_{\omega}$.
 
-Now we can continue the sequence "beyond infinity" by using the basic
-lemma repeatedly, starting at $t_{\omega}$. This gives us a second sequence
-$t_{\omega} < t_{\omega+1} < t_{\omega+2} < \dots$ such that $f$ is bounded on the interval
-$[0,t_{\omega+n}]$ for every $n$.
+Now we can continue the sequence "beyond infinity" by using the basic lemma 
+repeatedly, starting at $t_{\omega}$. This gives us a second sequence
+$t_{\omega} < t_{\omega+1} < t_{\omega+2} < \dots$ such that $f$ is bounded 
+on the interval $[0,t_{\omega+n}]$ for every $n$.
 
-It may look as though there is something not quite rigorous going on
-here. If you think of w as being infinity (as it is quite reasonable to
-do) then is it legitimate to start adding $1,2,3,\dots$ to it? Doesn't
-infinity plus one equal infinity?
+It may look as though there is something not quite rigorous going on here. 
+If you think of $\omega$ as being infinity (as it is quite reasonable to do) 
+then is it legitimate to start adding $1, 2, 3,\dots$ to it? 
+Doesn't infinity plus one equal infinity?
 
-I shall return to this question, but for the time being let me say only
-this: there is nothing to stop me using expressions like $\omega+17$ if all I
+I shall return to this question, but for the time being let me say only this: 
+there is nothing to stop me using expressions like $\omega+17$ if all I
 do is regard them as *notation* . Instead of writing $t_{\omega+n}$ I could have
 written $u_n$. Or I could have written $t_{0n}$ for $t_n$ and then $t_{1n}$ for
 $t_{\omega+n}$.
@@ -91,61 +92,60 @@ sequence $(t_{\omega+n})$ converges, and it feels natural to write $t_{2\omega}$
 for its limit. Again, as before, $f$ is bounded on the interval $[0,t_{2\omega}]$.
 
 Now we can continue the sequence – or perhaps one should say generalized
-sequence – with $t_{2\omega+1}$, $t_{2\omega+2}$ and so on. These converge to a 
-number we can call $t_{3\omega}$, and if we keep on going we will end up 
-producing, for every $m> 0$ and $n > 0$, a number $t_{m\omega+n}$ 
+sequence – with $t_{2\omega+1}$, $t_{2\omega+2}$ and so on. 
+These converge to a number we can call $t_{3\omega}$, and if we keep on going 
+we will end up producing, for every $m> 0$ and $n > 0$, a number $t_{m\omega+n}$ 
 (I shall interpret $t_0$ as $0$) such that $f$ is bounded on the interval 
 $[0,t_{m\omega+n}]$. Furthermore, $t_{m\omega+n}$ will be greater than 
 $t_{k\omega+l}$ if and only if $m > k$ or $m=k$ and $n > l$.
 
-What can we say now? What if none of these numbers is bigger than $1/100$,
+What can we say now? What if none of these numbers is bigger than $1/100$, 
 as may well be the case? Well, we are not forced to stop, because we
 could consider the increasing sequence $t_{\omega}, t_{2\omega}, t_{3\omega},
-\dots$ . This has a limit, which is easily seen to be bigger than any of the 
+\dots$. This has a limit, which is easily seen to be bigger than any of the 
 numbers $t_{m\omega+n}$, and what's more there is a natural name for this limit
-– $t_{\omega^2}$. Once again, $f$ will be bounded on the interval 
-$[0,t_{\omega^2}]$.
+– $t_{\omega^2}$. Once again, $f$ will be bounded on the interval $[0,t_{\omega^2}]$.
 
-For convenience, let me state and prove a **second basic lemma** , the
-one that we use for limits of sequences. It says that if we have an
-increasing sequence of numbers $u_1$, $u_2$,\... in $[0, 1]$ and if f is a
-continuous function that is bounded on the interval $[0,u_n]$ for every
-$n$, then the $u_n$ converge to a limit u and f is bounded on the interval
-$[0,u]$.
+For convenience, let me state and prove a **second basic lemma**, 
+the one that we use for limits of sequences. 
+It says that if we have an increasing sequence of numbers $u_1, u_2, \dots$ 
+in $[0, 1]$ and if $f$ is a continuous function that is bounded on the interval 
+$[0,u_n]$ for every $n$, then the $u_n$ converge to a limit $u$ and $f$ is bounded
+on the interval $[0,u]$.
 
 The fact that the $u_n$ converge is just the monotone-sequences axiom for
-the real numbers. As for the boundedness of f on $[0, u]$, I proved it
-earlier, but let me repeat the argument. By continuity, f is bounded in
-some interval about u. This interval contains $u_n$ for all sufficiently
+the real numbers. As for the boundedness of $f$ on $[0, u]$, I proved it
+earlier, but let me repeat the argument. By continuity, $f$ is bounded in
+some interval about $u$. This interval contains $u_n$ for all sufficiently
 large $n$, and in particular for *some* $n$. Hence, putting together the
 interval $[0,u_n]$ and the interval surrounding $u$, we find that $f$ is
 bounded on $[0, u]$.
 
 Now that I have gone this far, it should be clear how to continue,
 obtaining numbers $t_{l\omega^2+m\omega+n}$ for any $l,m,n > 0$. 
-And, of course, thisis still not the end. One can construct $t_{p(\omega)}$ 
+And, of course, this is still not the end. One can construct $t_{p(\omega)}$ 
 for any polynomial $p$ with positive integer coefficients, 
 in such a way that they come in the obvious order 
 (a neat way to describe it is that $t_{p(\omega)} > t_{q(\omega)}$ 
 if and only if $p(n) > q(n)$ for all sufficiently large integers $n$) and such
-that f is bounded on all the intervals $[0,t_{p(\omega)}]$. Then we can apply
-the second basic lemma to the sequence $t_{\omega}$, $t_{\omega^2}$, $t_{\omega^3}$,
-$\dots$ obtaining a limit, which  is called -- as you have probably guessed --
-$t_{\omega^{\omega}}$. I now leave it to you, if you are interested, to work out how
-to continue further, to $t_{\omega^{\omega^{\omega}}}$ and beyond, and then to 
-take a limit $t_{\epsilon_0}$, where $\epsilon_0$ is the standard notation for 
-what one might otherwise call $\omega$ to the $\omega$ to the $\omega$ to the 
-$\omega$ to the... and so on.
+that $f$ is bounded on all the intervals $[0,t_{p(\omega)}]$. 
+Then we can apply the second basic lemma to the sequence $t_{\omega}$, 
+$t_{\omega^2}$, $t_{\omega^3}$, $\dots$ obtaining a limit, which  is called 
+-- as you have probably guessed -- $t_{\omega^{\omega}}$. 
+I now leave it to you, if you are interested, to work out how to continue further, 
+to $t_{\omega^{\omega^{\omega}}}$ and beyond, and then to take a limit 
+$t_{\epsilon_0}$, where $\epsilon_0$ is the standard notation for what one might 
+otherwise call $\omega$ to the $\omega$ to the $\omega$ to the $\omega$ to the ... 
+and so on.
 
-What is the point of all this? There is nothing to force even
-$t_{\epsilon_0}$ to be close to $1$, and it begins to look as though, however
-ingenious we are in extending our notation in order to lengthen the
-"sequence", we will never manage to reach $1$ and hence never prove the
-theorem.
+What is the point of all this? There is nothing to force even $t_{\epsilon_0}$ 
+to be close to $1$, and it begins to look as though, however ingenious we are in 
+extending our notation in order to lengthen the"sequence", we will never manage 
+to reach $1$ and hence never prove the theorem.
 
 Is it conceivable that we could go *so far* with the process that we
-eventually succeeded in forcing the "sequence" to go beyond $1$? In one
-way the answer is yes, and in another it is no.
+eventually succeeded in forcing the "sequence" to go beyond $1$? 
+In one way the answer is yes, and in another it is no.
 
 The following observation gives us cause for optimism. If we could
 explain how to extend the sequence *uncountably* many times, then we
@@ -255,7 +255,7 @@ turns choosing positive integers, building a sequence
 (n~1~,n~2~,n~3~,\...). The first player wins if this sequence belongs to
 X and the second wins if it doesn\'t.
 
-A *strategy* for the first player is a function f that takes sequences
+A *strategy* for the first player is a function $f$ that takes sequences
 (n~1~,n~2~,\...,n~k~) (with k even) to positive integers. To use the
 strategy f, all the first player does is look at the sequence
 (n~1~,n~2~,\...,n~k~) so far and choose f((n~1~,n~2~,\...,n~k~) as the
@@ -282,10 +282,10 @@ But surely, you might still think, whatever the first player does is the
 result of *some* strategy, even if it isn\'t declared in advance. That
 is true, but it doesn\'t help the second player find a strategy. What we
 are trying to do is start from the premise \`For every first-player
-strategy f there is a second-player strategy g that defeats f\' to the
+strategy $f$ there is a second-player strategy g that defeats f\' to the
 conclusion \`There is a second-player strategy g that defeats every
 first-player strategy f\'. In other words, we are trying to interchange
-two quantifiers and obtain a g that is *independent* of f -- which
+two quantifiers and obtain a g that is *independent* of $f$ -- which
 certainly shouldn\'t be trivial.
 
 With the axiom of choice one can in fact build a game that is not
@@ -427,9 +427,9 @@ I(u), where u is the least element of $X$ that does not belong to Z.
 
 Next, I claim that if z is in Z, then there is exactly one isomorphism
 from I(z) to an initial segment of Y. For if not, let w be minimal such
-that there are two distinct order-isomorphisms f and g from I(w) to
+that there are two distinct order-isomorphisms $f$ and g from I(w) to
 initial segments of Y. Let v be minimal such that f(v) does not equal
-g(v). Then f and g must agree on the initial segment I(v), and f(v) and
+g(v). Then $f$ and g must agree on the initial segment I(v), and f(v) and
 g(v) are then forced to be the least element of Y that does not belong
 to f(I(v)).
 
@@ -516,19 +516,19 @@ which means that the "sequence" I constructed must eventually come to
 an end -- by reaching 1. To make this formal, let us define the sequence
 explicitly as follows. First enumerate all the rationals in $[0, 1]$.
 Now, if I have defined t~x~ then let y be the successor of x. The first
-basic lemma tells us that there is an s\> $X$ such that f is bounded on
+basic lemma tells us that there is an s\> $X$ such that $f$ is bounded on
 the interval $[0, s]$. The interval (x,s\] contains many rational
 numbers. For the sake of definiteness let t~y~ be the first rational q
-in the enumeration such that f is bounded on the interval \[0,q\]. If y
+in the enumeration such that $f$ is bounded on the interval \[0,q\]. If y
 is not the successor of any x, then define t~y~ to be the supremum of
-all t~x~ such that x< y. Since f is bounded up to every t~x~ with x< y
-and since these get arbitrarily close to t~y~, f is bounded up to t~y~.
+all t~x~ such that x< y. Since $f$ is bounded up to every t~x~ with x< y
+and since these get arbitrarily close to t~y~, $f$ is bounded up to t~y~.
 
 As long as t~y~ never equals 1 this defines a unique order isomorphism
 from $X$ into $[0, 1]$. (If not, let y be the first element of $X$ where
 anything goes wrong. But I\'ve just shown unambiguously how to define
 t~y~ once I\'ve defined t~x~ for all previous x.) It follows that for
-some y t~y~=1 and this shows that f is bounded on $[0, 1]$.
+some y t~y~=1 and this shows that $f$ is bounded on $[0, 1]$.
 
 
 
@@ -657,10 +657,10 @@ were not the case, then we would be able to find n such that b was
 isomorphic to an initial segment of \[a~n~\]. But since a~n~ embeds into
 b via the isomorphism with b~n~ this would show that \[a~n~\] was
 order-isomorphic to a subset of an initial segment I(t) of itself. But
-it is not hard to show that this is impossible. Let f be the supposed
+it is not hard to show that this is impossible. Let $f$ be the supposed
 isomorphism and let s be minimal such that f(s)< s. (Such an s exists -
 t is an example.) But then f(s)=u for some u< s and
-f(u)[\>]{.underline}u, so f is not order-preserving.
+f(u)[\>]{.underline}u, so $f$ is not order-preserving.
 
 Finally, if \[b\] is at least as big as every \[a~n~\] then the
 successor of \[b\] cannot be one of the \[a~n~\]. (The successor is
@@ -724,7 +724,7 @@ in the interval \[t~x~,t~y~\]. Luckily, this makes sense -- the set of
 all numbers satisfying the constraint attains its upper bound. Now
 suppose we generate the sequence t~1~,t~2~,\... in this way. Then either
 it reaches 1 or it converges to some limit t. But there is an interval
-about t in which f oscillates by at most 1/2, and that interval must
+about t in which $f$ oscillates by at most 1/2, and that interval must
 contain some t~n~, which proves that t~n+1~ is bigger than t -- a
 contradiction.
 
@@ -735,19 +735,19 @@ of going beyond w in the ordinal hierarchy.
 But once we have noticed this simpler proof, a yet simpler one suggests
 itself. After all, the number 1 was rather arbitrary above. Why not
 simply define t~n+1~ to be as large as possible subject to the
-constraint that f should be bounded on the interval \[t~n~,t~n+1~\]?
-Again, this makes sense. If f is bounded on the interval $[0, s]$ for
-every s< t, then f is bounded on the interval $[0, t]$ (since it is
+constraint that $f$ should be bounded on the interval \[t~n~,t~n+1~\]?
+Again, this makes sense. If $f$ is bounded on the interval $[0, s]$ for
+every s< t, then $f$ is bounded on the interval $[0, t]$ (since it is
 bounded on an interval surrounding t). Setting t~0~=0, what will t~1~
 be? It can\'t be less than 1 because then t~1~ is surrounded by an
-interval on which f is bounded, contradicting maximality. So it\'s 1,
+interval on which $f$ is bounded, contradicting maximality. So it\'s 1,
 and there isn\'t even a sequence.
 
 [This is basically the proof I gave in the page on]{#induction}[the
 boundedness of continuous functions on
 $[0, 1]$](https://www.dpmms.cam.ac.uk/~wtg10/bounded.html), and it can be
 thought of as looking for a minimal counterexample -- focusing on the
-infimum of the set of all t such that f is not bounded on $[0, t]$, and
+infimum of the set of all t such that $f$ is not bounded on $[0, t]$, and
 deriving a contradiction. This is not meant as a formal statement, as I
 wasn\'t taking the minimal element of a subset of a well-ordered set,
 and in fact I do not know of a formal procedure for removing ordinals
