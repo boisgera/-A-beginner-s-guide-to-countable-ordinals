@@ -147,101 +147,99 @@ Is it conceivable that we could go *so far* with the process that we
 eventually succeeded in forcing the "sequence" to go beyond $1$? 
 In one way the answer is yes, and in another it is no.
 
-The following observation gives us cause for optimism. If we could
-explain how to extend the sequence *uncountably* many times, then we
-would have proved the theorem. That is because every number in the
+The following observation gives us cause for optimism. 
+If we could explain how to extend the sequence *uncountably* many times, 
+then we would have proved the theorem. That is because every number in the
 "sequence" is followed by an open interval that contains no others,
 and these open intervals are disjoint. Since any open interval contains
-a rational number, there can be at most countably many of them. This
-would give us a contradiction, deduced from the assumption that we never
+a rational number, there can be at most countably many of them. 
+This would give us a contradiction, deduced from the assumption that we never
 passed 1 together with our method, whatever it might be, for continuing
 the process of extending uncountably many times.
 
-On the other hand, a second observation should give us pause for
-thought. If you look at the discussion above, you will see that at
-various points I had to make a "notational leap". Each of the
-following symbols required of me a small explanation, after which it
-became obvious for a while how to proceed: $\omega$, $\omega+1$, 
-$2\omega$, $\omega^2$, $\omega^{\omega}$,
-$\epsilon_0$. Given that there are only countably many finite strings of
-symbols, it will not be possible to continue to find an adequate
-notation for uncountably many terms in the sequence (hypothetical terms
-that is -- we eventually hope for a contradiction). That does not rule
-out a sort of infinitely long pseudo-notation (such as we use for real
-numbers -- it is somehow comforting to write
-$\pi = 3.14159265358979323846264338327950288\dots$ and imagine the sequence
-going on for ever) but it does suggest that we should not be too
+On the other hand, a second observation should give us pause for thought. 
+If you look at the discussion above, you will see that at various points 
+I had to make a "notational leap". Each of the following symbols required of me 
+a small explanation, after which it became obvious for a while how to proceed: 
+$\omega$, $\omega+1$, $2\omega$, $\omega^2$, $\omega^{\omega}$, $\epsilon_0$. 
+Given that there are only countably many finite strings of symbols, 
+it will not be possible to continue to find an adequate notation for uncountably
+many terms in the sequence (hypothetical terms that is -- we eventually hope 
+for a contradiction). That does not rule out a sort of infinitely long 
+pseudo-notation (such as we use for real numbers -- it is somehow comforting 
+to write $\pi = 3.14159265358979323846264338327950288\dots$ and imagine the 
+sequence going on for ever) but it does suggest that we should not be too
 *reliant* on notation. There is in fact a theorem of logic (whose
 precise statement, alas, I do not know) which says something like that
 one does indeed have to continue making notational leaps, and that
 eventually it ceases to be possible.
 
-Click [here](#wosets) if you would now like to skip to a general
-discussion of well-ordered sets and ordinals.
+Click [here](#wosets) if you would now like to skip to a general discussion of 
+well-ordered sets and ordinals.
 
 ### Problem 2. Generating the Borel sets
 
 A *Borel set* of real numbers is a set that can be built out of open or
 closed sets by repeatedly taking countable unions or countable
 intersections. To be precise, open sets and closed sets are Borel, and
-if B~1~,B~2~, B~3~,\.... are Borel, then so is their union and their
+if $B_1$, $B_2$, $B_3$, $\dots$ are Borel, then so is their union and their
 intersection.
 
-Let me give a non-trivial example of a Borel set (i.e., one that isn\'t
-something like the union of an open set with a closed set). First, here
-is a subset A of (0,1) which has three properties that might at first
-seem hard to reconcile: it is open and dense, but is nothing like the
-whole of (0,1). If you think that a dense open subset of (0,1) *must* be
-the whole of (0,1), then you should consider the union of (0,1/2) and
-(1/2,1) and see where your argument breaks down. The point is that,
-although every point in some dense set is surrounded by a little
-interval, you can make the width of that interval depend on the point in
+Let me give a non-trivial example of a Borel set (i.e., one that isn't
+something like the union of an open set with a closed set). 
+First, here is a subset $A$ of $(0,1)$ which has three properties that might 
+at first seem hard to reconcile: it is open and dense, but is nothing like the
+whole of $(0,1)$. If you think that a dense open subset of $(0,1)$ *must* be
+the whole of $(0,1)$, then you should consider the union of $(0,1/2)$ and
+$(1/2,1)$ and see where your argument breaks down. 
+The point is that, although every point in some dense set is surrounded by a 
+little interval, you can make the width of that interval depend on the point in
 order to leave other points out of your set.
 
-Once you have spotted that, then you can go much further. Let q~1~,
-q~2~, q~3~,\... be an enumeration of the rationals in $[0, 1]$ and for
-each k let I~k~ be an interval of width r^-k^ centered on q~k~. Let
-A\'(r) be the union of all the sets I~k~ and let A(r) be the
-intersection of A\'(r) with (0,1). For r\> 2 the sum of the widths of
-the I~k~ is less than 1, so A\'(r) cannot possibly be the whole of
-(0,1). (For those who know what this means, it has measure less than 1.)
-The larger r is, the less of (0,1) is contained in A(r).
+Once you have spotted that, then you can go much further. 
+Let $q_1$, $q_2$, $q_3$, $\dots$ be an enumeration of the rationals in $[0,1]$ 
+and for each $k$ let $I_k$ be an interval of width $r^{-k}$ centered on $q_k$. 
+Let $A'(r)$ be the union of all the sets $I_k$ and let $A(r)$ be the
+intersection of $A'(r)$ with $(0,1)$. For $r > 2$ the sum of the widths of
+the $I_k$ is less than 1, so $A'(r)$ cannot possibly be the whole of
+$(0,1)$. (For those who know what this means, it has measure less than 1.)
+The larger $r$ is, the less of $(0,1)$ is contained in $A(r)$.
 
-Now let A be the intersection of all the A(r), for r=1,2,3,\... . Since
-all the A(r) were open, A is a Borel set. What is A? You might guess
-that A was just the set of all rationals in (0,1), but in fact this is
-quite wrong. (It is an interesting exercise to see why.) Since A
-contains all rationals but is not the whole of (0,1) (in fact, it has
-measure zero) it cannot possibly be closed. So it is a good example of a
-countable intersection of open sets which cannot be described any more
-simply than that.
+Now let $A$ be the intersection of all the $A(r)$, for $r=1,2,3,\dots$
+Since all the $A(r)$ were open, $A$ is a Borel set. What is $A$? 
+You might guess that $A$ was just the set of all rationals in $(0,1)$, 
+but in fact this is quite wrong. (It is an interesting exercise to see why.) 
+Since $A$ contains all rationals but is not the whole of $(0,1)$ 
+(in fact, it has measure zero) it cannot possibly be closed. 
+So it is a good example of a countable intersection of open sets which cannot 
+be described any more simply than that.
 
 Returning to more general Borel sets, let us think what a typical Borel
-set might look like. Let U ~0~ be the class of all open sets, and let
-$u_1$ consist of all intersections of countably many sets in U~0~. We
-cannot produce more sets by taking countable intersections of sets in
-$u_1$ (since such sets will themselves belong to $u_1$) but there is no
-guarantee that a countable *union* of sets in $u_1$ will belong to $u_1$.
+set might look like. Let $U_0$ be the class of all open sets, and let
+$U_1$ consist of all intersections of countably many sets in $U_0$. 
+We cannot produce more sets by taking countable intersections of sets in
+$U_1$ (since such sets will themselves belong to $U_1$) but there is no
+guarantee that a countable *union* of sets in $U_1$ will belong to $U_1$.
 In fact, examples can be constructed that don't.
 
-We can therefore define $u_2$ to be the class of all countable unions of
-sets in $u_1$, and in general can define $u_n$ to be the set of all
-countable unions/intersections of sets in U~n-1~ according to whether n
+We can therefore define $U_2$ to be the class of all countable unions of
+sets in $U_1$, and in general can define $U_n$ to be the set of all
+countable unions/intersections of sets in $U_{n-1}$ according to whether $n$
 is even/odd.
 
-Does the process stop there? Not at all. We can then define U~w~ to be
-the class of all unions of sets A~1~, A~2~,\... such that A~n~ belongs
-to $u_n$. This is a countable union of sets we have so far built, and
-there is no reason for it to belong to any of the classes $u_n$.
-(Incidentally, I am using the word \`class\' just to distinguish subsets
-of R from sets of subsets of R -- not because there is any danger of
-running into Russell\'s paradox.)
+Does the process stop there? Not at all. We can then define $U_{\omega}$ to be
+the class of all unions of sets $A_1$, $A_2$, $\dots$ such that $A_n$ belongs
+to $U_n$. This is a countable union of sets we have so far built, 
+and there is no reason for it to belong to any of the classes $U_n$.
+(Incidentally, I am using the word "class" just to distinguish subsets
+of $\mathbb{R}$ from sets of subsets of $\mathbb{R}$ -- 
+not because there is any danger of running into Russell's paradox.)
 
 Now we can let $U_{\omega+1}$ consist of all countable intersections of sets in
-U~w~, and so on. In fact, just as with Problem 1, one ends up with a
+$U_{\omega}$, and so on. In fact, just as with Problem 1, one ends up with a
 hierarchy that goes well beyond infinity, and about which it gradually
 becomes harder and harder to speak. I leave it to the reader to work out
-which sets belong to U~w^w^~.
+which sets belong to $U_{\omega^{\omega}}$.
 
 Click [here](#wosets) if you would now like to skip to a general
 discussion of well-ordered sets and ordinals.
