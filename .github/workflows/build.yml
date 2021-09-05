@@ -4,6 +4,9 @@ on: [push]
 jobs:
   main:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0} 
     steps:
 
       - name: Checkout
@@ -14,6 +17,12 @@ jobs:
 
       - name: Install LaTeX
         run: sudo apt-get install --yes texlive-full
+
+      - name: Install Conda environment 
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: ordinals
+          environment-file: environment.yml
 
       - name: Build the PDF
         run: ./build
@@ -26,6 +35,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: build
-          FOLDER: "tex"
+          FOLDER: "."
           SINGLE_COMMIT: true
           PRESERVE: true
