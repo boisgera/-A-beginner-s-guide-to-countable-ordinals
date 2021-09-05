@@ -1,0 +1,31 @@
+name: build
+on: [push]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update apt-get Lists
+        run: sudo apt-get update
+
+      - name: Install LaTeX
+        run: sudo apt-get install --yes texlive-full
+
+      - name: Build the PDF
+        run: ./build
+
+      - name: Setup Deployment
+        run: rm .gitignore
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: build
+          FOLDER: "tex"
+          SINGLE_COMMIT: true
+          PRESERVE: true
