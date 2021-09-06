@@ -1,5 +1,5 @@
 ---
-title: Ordinals and Ordinal Hierarchies – A beginner's guide to countable ordinals
+title: A beginner's guide to countable ordinals
 author:
 - Timothy Gowers
 ---

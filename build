@@ -1,3 +1,12 @@
 #!/usr/bin/env bash
 
 pandoc --toc -o "Ordinals and Ordinal Hierarchies.pdf" "Ordinals and Ordinal Hierarchies.md"
+pandoc \
+  --standalone \
+  --include-in-header html/Alegreya.html \
+  -V mainfont=Alegreya \
+  -V fontsize="24px" \
+  --mathjax \
+  --toc \
+  -o "Ordinals and Ordinal Hierarchies.html" \
+  "Ordinals and Ordinal Hierarchies.md"
