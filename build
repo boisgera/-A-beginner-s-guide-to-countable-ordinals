@@ -14,5 +14,5 @@ pandoc \
   -V fontsize="24px" \
   --mathjax \
   --toc \
-  -o "A beginner's guide to countable ordinals.html" \
+  -o "index.html" \
   "A beginner's guide to countable ordinals.md"
