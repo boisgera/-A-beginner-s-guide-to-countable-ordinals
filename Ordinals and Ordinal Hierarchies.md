@@ -279,7 +279,7 @@ That is true, but it doesn't help the second player find a strategy.
 What we are trying to do is start from the premise "For every first-player
 strategy $f$ there is a second-player strategy $g$ that defeats $f$" to the
 conclusion "There is a second-player strategy $g$ that defeats every
-first-player strategy $f"$. In other words, we are trying to interchange
+first-player strategy $f$". In other words, we are trying to interchange
 two quantifiers and obtain a $g$ that is *independent* of $f$ 
 -- which certainly shouldn't be trivial.
 
