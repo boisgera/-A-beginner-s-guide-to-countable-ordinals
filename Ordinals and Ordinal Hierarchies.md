@@ -246,129 +246,128 @@ discussion of well-ordered sets and ordinals.
 
 ### Problem 3. Showing that open games are determined
 
-Many two-player games of skill are special cases of the following
-general one. Write N^N^ for the set of all sequences of positive
-integers, and let $X$ be a subset of N^N^. Two players of the X-game take
-turns choosing positive integers, building a sequence
-(n~1~,n~2~,n~3~,\...). The first player wins if this sequence belongs to
-X and the second wins if it doesn\'t.
+Many two-player games of skill are special cases of the following general one. 
+Write $\mathbb{N}^{\mathbb{N}}$ for the set of all sequences of positive
+integers, and let $X$ be a subset of $\mathbb{N}^{\mathbb{N}}$. 
+Two players of the $X$-game take turns choosing positive integers, 
+building a sequence $(n_1,n_2,n_3,\dots)$. The first player wins if this 
+sequence belongs to $X$ and the second wins if it doesn't.
 
 A *strategy* for the first player is a function $f$ that takes sequences
-(n~1~,n~2~,\...,n~k~) (with k even) to positive integers. To use the
-strategy f, all the first player does is look at the sequence
-(n~1~,n~2~,\...,n~k~) so far and choose f((n~1~,n~2~,\...,n~k~) as the
-next move. A *winning strategy* for the first player is a strategy f
-such that, using it, the first player is guaranteed to win. Similarly
-one can define strategies and winning strategies for the second player.
-A game is called *determined* if one of the two players has a winning
-strategy.
+$(n_1, n_2, \dots, n_k)$ (with $k$ even) to positive integers. 
+To use the strategy $f$, all the first player does is look at the sequence
+$(n_1, n_2, \dots, n_k)$ so far and choose $f((n_1, n_2, \dots, n_k))$ 
+as the next move. A *winning strategy* for the first player is a strategy $f$
+such that, using it, the first player is guaranteed to win. 
+Similarly one can define strategies and winning strategies for the second player.
+A game is called *determined* if one of the two players has a winning strategy.
 
 How, you might wonder, could there possibly be a game that was not
 determined? If the first player has no winning strategy, does that not
 mean that the second player is guaranteed to win, and is that not the
 same as saying that the second player has a winning strategy?
 
-The sketchy argument of the last paragraph doesn\'t work for the
-following reason. What we can deduce from the first player having no
-winning strategy is that, given any strategy, the second player can come
-up with another strategy that defeats it. (This strategy can be very
-simple -- something like choose 2 then 8 then 673 then \.... etc.) But
-there is no guarantee that the first player will stick to any one
-strategy.
+The sketchy argument of the last paragraph doesn't work for the following reason. 
+What we can deduce from the first player having no winning strategy is that, 
+given any strategy, the second player can come up with another strategy that 
+defeats it. (This strategy can be very simple -- something like choose 2 then 8 then 673 then ... etc.) 
+But there is no guarantee that the first player will stick to any one strategy.
 
-But surely, you might still think, whatever the first player does is the
-result of *some* strategy, even if it isn\'t declared in advance. That
-is true, but it doesn\'t help the second player find a strategy. What we
-are trying to do is start from the premise \`For every first-player
-strategy $f$ there is a second-player strategy g that defeats f\' to the
-conclusion \`There is a second-player strategy g that defeats every
-first-player strategy f\'. In other words, we are trying to interchange
-two quantifiers and obtain a g that is *independent* of $f$ -- which
-certainly shouldn\'t be trivial.
+But surely, you might still think, whatever the first player does is the result 
+of *some* strategy, even if it isn't declared in advance. 
+That is true, but it doesn't help the second player find a strategy. 
+What we are trying to do is start from the premise "For every first-player
+strategy $f$ there is a second-player strategy $g$ that defeats $f$" to the
+conclusion "There is a second-player strategy $g$ that defeats every
+first-player strategy $f"$. In other words, we are trying to interchange
+two quantifiers and obtain a $g$ that is *independent* of $f$ 
+-- which certainly shouldn't be trivial.
 
-With the axiom of choice one can in fact build a game that is not
-determined -- using a \`just do it\' proof of a kind explained
-[here](https://www.dpmms.cam.ac.uk/~wtg10/justdoit.html). The proof
-depends on well-orderings so I will give it [later on](#undetermined).
+With the axiom of choice one can in fact build a game that is not determined 
+-- using a "just do it" proof of a kind explained [here][justdoit]. 
+The proof depends on well-orderings so I will give it [later on](#undetermined).
+
+[justdoit]: https://www.dpmms.cam.ac.uk/~wtg10/justdoit.html
 
 An *open* game is defined to be one where, given any sequence
-(n~1~,n~2~,n~3~,\...) in $X$ there exists a k such that all sequences that
-begin (n~1~,n~2~,\...,n~k~) are also in X. In other words, if the first
-player wins, then there was some point after which they would have won
-whatever moves they had played. Here are a few examples of open games.
+$(n_1, n_2, n_3, \dots)$ in $X$ there exists a $k$ such that all sequences that
+begin $(n_1, n_2, \dots, n_k)$ are also in $X$. 
+In other words, if the first player wins, then there was some point after which 
+they would have won whatever moves they had played. 
+Here are a few examples of open games.
 Although these games go on for ever, I shall think of them as finishing
-when they reach a finite sequence all of whose continuations lie in $X$ -
-after which point they are not very interesting.
+when they reach a finite sequence all of whose continuations lie in $X$ 
+-- after which point they are not very interesting.
 
-\(1) Let $X$ be the set of all sequences with at least 300 occurrences of
-the number 10. It is of course very easy for player 1 to win this game -
-one strategy is to choose the number 10 for the first 300 moves. More to
-the point, if player 1 wins, there must be some point at which the
-number 10 has appeared 300 times, after which nothing can affect the
-outcome of the game.
+ 1. Let $X$ be the set of all sequences with at least 300 occurrences of
+    the number 10. It is of course very easy for player 1 to win this game 
+    -- one strategy is to choose the number 10 for the first 300 moves. 
+    More to the point, if player 1 wins, there must be some point at which the
+    number 10 has appeared 300 times, after which nothing can affect the
+    outcome of the game.
 
-\(2) Let $X$ be the set of all sequences (n~1~,n~2~,n~3~,\...) with at
-least n~10~ occurrences of the number 10. Again, player 1 has an easy
-strategy: wait for player 2 to choose n~10~ and then keep choosing 10s
-until there are enough of them. Notice a difference between this game
-and the previous one though: whereas in the previous one player 1 could
-guarantee to win after 300 moves, in this one player 2 can make the game
-last arbitrarily long simply by choosing n~10~ arbitrarily large.
+ 2. Let $X$ be the set of all sequences $(n_1, n_2, n_3, \dots)$ with at
+    least $n_{10}$ occurrences of the number 10. Again, player 1 has an easy
+    strategy: wait for player 2 to choose $n_{10}$ and then keep choosing 10s
+    until there are enough of them. Notice a difference between this game
+    and the previous one though: whereas in the previous one player 1 could
+    guarantee to win after 300 moves, in this one player 2 can make the game
+    last arbitrarily long simply by choosing $n_{10}$ arbitrarily large.
 
-\(3) Let $X$ be the set of all sequences (n~1~,n~2~,n~3~,\...) with at
-least n~n~10~~ occurrences of the number 10. Once again, player 1 has an
-easy strategy: wait for player 2 to choose n~10~, then wait for player 2
-to choose n~n~10~~ and then choose that number of 10s. Whereas with the
-previous time player 1 could say, \`After 10 moves of the game I will be
-able to tell you how long it will take me to win,\' for this game no
-such assurance can be given. The best that can be said is, \`After 10
-moves I will be able to tell you when I will know how long the game will
-take.\'
+ 3. Let $X$ be the set of all sequences $(n_1, n_2, n_3, \dots)$ with at
+    least $n_{n_{10}}$ occurrences of the number 10. 
+    Once again, player 1 has an easy strategy: wait for player 2 to choose 
+    $n_{10}$, then wait for player 2 to choose $n_{n_{10}}$ and then choose 
+    that number of 10s. Whereas with the previous time player 1 could say, 
+    "After 10 moves of the game I will be able to tell you how long it will 
+    take me to win," for this game no such assurance can be given. 
+    The best that can be said is, "After 10 moves I will be able to tell you 
+    when I will know how long the game will take."
 
-As is becoming clear, there is a hierarchy of complexity appearing. Let
-us say that a game has complexity n if player 1 can guarantee to win
-after n moves. We could describe this inductively by saying that the
-complexity is 0 if player 1 wins no matter what happens and complexity n
+As is becoming clear, there is a hierarchy of complexity appearing. 
+Let us say that a game has complexity $n$ if player 1 can guarantee to win
+after $n$ moves. We could describe this inductively by saying that the
+complexity is 0 if player 1 wins no matter what happens and complexity $n$
 if after both players have moved once the complexity of the resulting
-position is n-1. We can then say that a game has complexity w if after
-the first moves the resulting position has complexity n for *some* n.
+position is $n-1$. We can then say that a game has complexity $\omega$ if after
+the first moves the resulting position has complexity $n$ for *some* $n$.
 Next, it has complexity $\omega+n$ if after the first moves the resulting
 position has complexity $\omega+n-1$.
 
 Just to illustrate this: the first game above has complexity 300 and the
 second has complexity $\omega+4$. To see why the second statement is true,
 notice that on the fifth pair of moves the second player will be forced
-to decide on n~10~ after which the length of the game will be known and
+to decide on $n_{10}$ after which the length of the game will be known and
 hence the complexity will be some positive integer.
 
 A game has complexity $2\omega$ if after the first move the resulting position
-has complexity \$omega+n$ for some n. It has complexity w^2^ if after the first
-move the game has complexity $a\omega+b$ for some $a, b$. (When I say \`has
-complexity \...\' I mean \`has complexity no worse than \...\'.) It has
-complexity w^w^ if after the first move the game has complexity some
-polynomial in w.
+has complexity $\omega + n$ for some $n$. It has complexity $\omega^2$ if after 
+the first move the game has complexity $a\omega+b$ for some $a, b$. 
+(When I say "has complexity ..." I mean "has complexity no worse than ...".) 
+It has complexity $\omega^{\omega}$ if after the first move the game has 
+complexity some polynomial in $\omega$.
 
 And so it goes on, just as with the previous examples. What would player
-1 be able to guarantee if the game had complexity w^2^? They would find
-it rather hard to explain, but might make an attempt like this: \`I will
-be able to tell you how long it will be until I can tell you how long it
-will be until I can tell you how long it will be until \... and so on
-\.... I can tell you how long it will be until I win the game, and after
-the second player\'s first move I will be able to tell you how many
-times I needed to repeat the words \`\`I can tell you how long it will
-be until\'\'.\' I leave it to the reader to give an intuitive
-description of games of complexity w^w^.
+1 be able to guarantee if the game had complexity $\omega^2$? 
+They would find it rather hard to explain, but might make an attempt like this: 
+"I will be able to tell you how long it will be until I can tell you how long it
+will be until I can tell you how long it will be until ... and so on
+... I can tell you how long it will be until I win the game, and after
+the second player's first move I will be able to tell you how many
+times I needed to repeat the words 'I can tell you how long it will
+be until'." I leave it to the reader to give an intuitive description of games 
+of complexity $\omega^{\omega}$.
 
-Before moving on, let us see why every game of complexity w^2^ is
+Before moving on, let us see why every game of complexity $\omega^2$ is
 determined. I shall assume that every game of complexity $m\omega+n$ is
 determined (as an inductive hypothesis). If player 2 has no winning
 strategy, there must be some first move for player 1 such that player 2
-still has no winning strategy. After they have both had their first
-turn, the position is a game of complexity $m\omega+n$ for some $m,n$, and is
-therefore determined. Since player 2 does not have a winning strategy,
-player 1 must. But this gives player 1 a strategy for the whole game -
-do that first move and then apply whatever winning strategy is
-appropriate after player 2\'s first move.
+still has no winning strategy. 
+After they have both had their first turn, the position is a game of complexity $m\omega+n$ for some $m,n$, and is therefore determined. 
+Since player 2 does not have a winning strategy, player 1 must. 
+But this gives player 1 a strategy for the whole game 
+-- do that first move and then apply whatever winning strategy is
+appropriate after player 2's first move.
 
 Well-ordered sets {#wosets}
 --------------------------------------------------------------------------------
@@ -448,7 +447,7 @@ element 1, the next 2, the next 3 and so on. (I can always talk about
 I\'ve gone through all the natural numbers and still haven\'t included
 all of X, then I\'ll call the next element w, the next $\omega+1$ and so on.
 Then after those I\'ll have $2\omega$, $2\omega+1$ and so on. Then $3\omega$, 4w,\...
-w^2^,..,w^w^,\...,w^w^w^^,\..., epsilon~0~,\... . I didn\'t mention
+$\omega^2$,..,$\omega^{\omega}$,\...,w^w^w^^,\..., epsilon~0~,\... . I didn\'t mention
 earlier that there are also epsilon~1~, epsilon~2~, \.... ,
 epsilon~w~,\...,epsilon~epsilon~0~~,\... and even
 epsilon~epsilon~epsilon~\...~~~.
@@ -600,8 +599,8 @@ can now be repeated. In other words, player 2 can play in such a way
 that player 1 never has a winning strategy of countable complexity, and
 in particular never wins the game (or else the complexity would be
 zero). If player 2 plays like this, the result will be some infinite
-sequence (n~1~,n~2~,n~3~,\...). If it belonged to W, then there would be
-some k such that all sequences beginning (n~1~,n~2~,\...,n~k~) were also
+sequence $(n_1, n_2, n_3, \dots)$. If it belonged to W, then there would be
+some k such that all sequences beginning $(n_1, n_2, \dots, n_k)$ were also
 in W -- by the definition of an open game. But this contradicts the fact
 that player 1 never wins. Hence, player 2 has a way of ensuring that the
 game results in a sequence not in W -- that is, has a winning strategy.
@@ -771,7 +770,7 @@ In other words, what one *can* conclude from player 1 not having a
 winning strategy is that player 2 has a strategy that makes it possible
 to avoid losing at any finite stage of the game. If the game is open,
 this will in fact be a winning strategy. To see this, suppose that the
-game comes to an end with a sequence (n~1~,n~2~,n~3~,\...) and that at
+game comes to an end with a sequence $(n_1, n_2, n_3, \dots)$ and that at
 no stage has player 1 won. Then this sequence cannot be a win for player
 1, or there would have been some k such that player 1 had won after the
 k^th^ move. Therefore, it is a win for player 2. Note that I reasoned
