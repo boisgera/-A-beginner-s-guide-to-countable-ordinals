@@ -24,7 +24,7 @@ jobs:
           activate-environment: ordinals
           environment-file: environment.yml
 
-      - name: Build the PDF
+      - name: Build PDF and HTML
         run: ./build
 
       - name: Setup Deployment
