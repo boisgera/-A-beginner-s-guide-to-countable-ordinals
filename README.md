@@ -6,6 +6,6 @@ Source: <https://www.dpmms.cam.ac.uk/~wtg10/ordinals.html>
 
 Transcripts:
 
-  - [PDF](https://boisgera.github.io/countable-ordinals/A%20beginner's%20guide%20to%20countable ordinals.pdf)
+  - [PDF](https://boisgera.github.io/countable-ordinals/A%20beginner's%20guide%20to%20countable%20ordinals.pdf)
 
   - [HTML](https://boisgera.github.io/countable-ordinals)
