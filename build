@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-pandoc --toc -o "Ordinals and Ordinal Hierarchies.pdf" "Ordinals and Ordinal Hierarchies.md"
+# PDF generation
+pandoc \
+  --toc \
+  -o "A beginner's guide to countable ordinals.pdf" 
+  "A beginner's guide to countable ordinals.md"
+
+# HTML generation
 pandoc \
   --standalone \
   --include-in-header html/Alegreya.html \
@@ -8,5 +14,5 @@ pandoc \
   -V fontsize="24px" \
   --mathjax \
   --toc \
-  -o "Ordinals and Ordinal Hierarchies.html" \
-  "Ordinals and Ordinal Hierarchies.md"
+  -o "A beginner's guide to countable ordinals.html" \
+  "A beginner's guide to countable ordinals.md"
