@@ -3,7 +3,7 @@
 # PDF generation
 pandoc \
   --toc \
-  -o "A beginner's guide to countable ordinals.pdf" 
+  -o "A beginner's guide to countable ordinals.pdf" \
   "A beginner's guide to countable ordinals.md"
 
 # HTML generation
