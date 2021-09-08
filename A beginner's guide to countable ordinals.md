@@ -374,96 +374,96 @@ Well-ordered sets {#wosets}
 
 ### Definition of well-ordered sets
 
-A *total ordering* , or just ordering, on a set $X$ is a transitive
-relation < such that for every x,y in $X$ exactly one of x< y, x=y or
-y< $X$ is true. A total ordering is called a *well-ordering* if, in
-addition, every non-empty subset of $X$ has a minimal element. That is, if
-Y is a non-empty subset of X, there exists some y in Y such that every z
-in Y is greater than or equal to y.
+A *total ordering*, or just ordering, on a set $X$ is a transitive
+relation $<$ such that for every $x,y$ in $X$ exactly one of $x < y$, $x=y$ or
+$y < x$ is true. A total ordering is called a *well-ordering* if, 
+in addition, every non-empty subset of $X$ has a minimal element. 
+That is, if $Y$ is a non-empty subset of $X$, there exists some $y$ in $Y$ 
+such that every $z$ in $Y$ is greater than or equal to $y$.
 
 The most familiar well-ordering is the usual ordering on the natural
-numbers: every non-empty subset of N has a least element. (This fact is
-discussed a bit more [below](#induction).) A more complicated one was
-defined earlier, namely the set of all polynomials p with non-negative
-integer coefficients, with p < q if and only if p(x)< q(x) for all
-sufficiently large x. To see that this is a well-ordering, let P be a
-set of such polynomials. From P we can pick all polynomials of least
-degree. (Note that if deg(p)< deg(q) then p< 1.) Amongst those we can
-select with smallest leading coefficient. (Note that if p has a smaller
-leading coefficient than q and they are of the same degree, then p< q.)
+numbers: every non-empty subset of $\mathbb{N}$ has a least element. 
+(This fact is discussed a bit more [below](#induction).) 
+A more complicated one was defined earlier, namely the set of all polynomials 
+$p$ with non-negative integer coefficients, with $p < q$ if and only if 
+$p(x) < q(x)$ for all sufficiently large $x$. 
+To see that this is a well-ordering, let $P$ be a
+set of such polynomials. From $P$ we can pick all polynomials of least
+degree. (Note that if $\mathrm{deg}(p) < \mathrm{deg}(q)$ then $p< 1$.) 
+Amongst those we can select with smallest leading coefficient. 
+(Note that if $p$ has a smaller leading coefficient than $q$ and they are of 
+the same degree, then $p < q$.)
 Amongst those we can take the ones with smallest next coefficient, and
-so on. We end up with a polynomial p which is smaller in the ordering
-than every other q in P.
+so on. We end up with a polynomial $p$ which is smaller in the ordering
+than every other $q$ in $P$.
 
 ### Maps between well-ordered sets
 
-A set with a total ordering is called a totally ordered set. A map f
-between two totally ordered sets $X$ and Y is called an
-*order-isomorphism* if it is a bijection and f(x)< f(y) if and only if
-x< y. In other words, it is an invertible map that preserves order. If
-there is an order-isomorphism between $X$ and Y then $X$ and Y are said to
-be *order-isomorphic* .
+A set with a total ordering is called a totally ordered set. 
+A map $f$ between two totally ordered sets $X$ and $Y$ is called an
+*order-isomorphism* if it is a bijection and $f(x) < f(y)$ if and only if
+$x < y$. In other words, it is an invertible map that preserves order. 
+If there is an order-isomorphism between $X$ and $Y$ then $X$ and $Y$ are said 
+to be *order-isomorphic* .
 
 Let $X$ be a well-ordered set. An *initial segment* of $X$ is a subset of
-the form I(z)={x:x< z}. A very important fact about well-ordered sets
-is the following: if $X$ and Y are well-ordered sets then either $X$ is
-order-isomorphic to Y or one of $X$ and Y is order-isomorphic to an
+the form $I(z) = \{x:x< z\}$. A very important fact about well-ordered sets
+is the following: if $X$ and $Y$ are well-ordered sets then either $X$ is
+order-isomorphic to $Y$ or one of $X$ and $Y$ is order-isomorphic to an
 initial segment of the other. Here is (a sketch of) how to prove it.
 
 Roughly what we want to do is to take the smallest element of $X$ and pair
-it with the smallest element of Y, then the next smallest then the next
-smallest and so on. Of course, this \`and so on\' is one of our
-problematic ones, because we may need to pair off the omegath smallest
-elements and so on well beyond infinity. However, we can avoid getting
-into those details by using the well-ordering property.
+it with the smallest element of $Y$, then the next smallest then the next
+smallest and so on. Of course, this "and so on" is one of our problematic ones, because we may need to pair off the $\omega$th smallest elements and so on well 
+beyond infinity. However, we can avoid getting into those details by using the well-ordering property.
 
-Let Z be the set of all z in $X$ such that I(z) is order-isomorphic to an
-initial segment of Y. If z is in Z and w< z then it is easy to see that
-w is in Z. Hence, either Z is all of $X$ or it is the initial segment
-I(u), where u is the least element of $X$ that does not belong to Z.
+Let $Z$ be the set of all $z$ in $X$ such that $I(z)$ is order-isomorphic to an
+initial segment of $Y$. If $z$ is in $Z$ and $w < z$ then it is easy to see that
+$w$ is in $Z$. Hence, either $Z$ is all of $X$ or it is the initial segment
+$I(u)$, where $u$ is the least element of $X$ that does not belong to $Z$.
 
-Next, I claim that if z is in Z, then there is exactly one isomorphism
-from I(z) to an initial segment of Y. For if not, let w be minimal such
-that there are two distinct order-isomorphisms $f$ and g from I(w) to
-initial segments of Y. Let v be minimal such that f(v) does not equal
-g(v). Then $f$ and g must agree on the initial segment I(v), and f(v) and
-g(v) are then forced to be the least element of Y that does not belong
-to f(I(v)).
+Next, I claim that if $z$ is in $Z$, then there is exactly one isomorphism
+from $I(z)$ to an initial segment of $Y$. For if not, let $w$ be minimal such
+that there are two distinct order-isomorphisms $f$ and $g$ from $I(w)$ to
+initial segments of $Y$. Let $v$ be minimal such that $f(v)$ does not equal
+$g(v)$. Then $f$ and $g$ must agree on the initial segment $I(v)$, and $f(v)$ 
+and $g(v)$ are then forced to be the least element of $Y$ that does not belong
+to $f(I(v))$.
 
-This observation allows us to define an order-isomorphism from Z into Y
-- each z in Z maps to the least element of Y not included in f(I(z)).
-Then either f(Z)=Y, in which case we are done, or f(Z) is a proper
-subset of Y, in which case Z must be the whole of $X$ or we\'d be able to
-extend f.
+This observation allows us to define an order-isomorphism from $Z$ into $Y$
+-- each $z$ in $Z$ maps to the least element of $Y$ not included in $f(I(z))$.
+Then either $f(Z) = Y$, in which case we are done, or $f(Z)$ is a proper
+subset of $Y$, in which case $Z$ must be the whole of $X$ or we'd be able to
+extend $f$.
 
-
-
-### Order-types of well-ordered sets.
+### Order-types of well-ordered sets
 
 As you may well have noticed, there is an obvious notation for at least
-some of the elements of a well-ordered set X. We could call the first
-element 1, the next 2, the next 3 and so on. (I can always talk about
-\`the next\': it just means the minimal element not yet mentioned.) If
-I\'ve gone through all the natural numbers and still haven\'t included
-all of X, then I\'ll call the next element w, the next $\omega+1$ and so on.
-Then after those I\'ll have $2\omega$, $2\omega+1$ and so on. Then $3\omega$, 4w,\...
-$\omega^2$,..,$\omega^{\omega}$,\...,w^w^w^^,\..., epsilon~0~,\... . I didn\'t mention
-earlier that there are also epsilon~1~, epsilon~2~, \.... ,
-epsilon~w~,\...,epsilon~epsilon~0~~,\... and even
-epsilon~epsilon~epsilon~\...~~~.
+some of the elements of a well-ordered set $X$. We could call the first
+element $1$, the next $2$, the next $3$ and so on. (I can always talk about
+"the next": it just means the minimal element not yet mentioned.) 
+If I've gone through all the natural numbers and still haven't included
+all of $X$, then I'll call the next element $\omega$, the next $\omega+1$ 
+and so on.
+Then after those I'll have $2\omega$, $2\omega+1$ and so on. 
+Then $3\omega$, $4 \omega$, $\dots$, $\omega^2$, $\dots$, $\omega^{\omega}$,
+$\dots$, $\omega^{\omega^{\omega}}$, $\dots$, $\epsilon_0$, $\dots$. 
+I didn't mention earlier that there are also $\epsilon_1$, $\epsilon_2$, 
+$\dots$, $\epsilon_{\omega}$, $\epsilon_{\epsilon_0}$, $\dots$ and even
+$\epsilon_{\epsilon_{\epsilon_{\dots}}}$.
 
-The notion of order-isomorphism gives us what we\'d like to call an
-equivalence relation on the set of all well-ordered sets. Unfortunately,
-we can\'t call it that because, for example, every set of the form {A},
-where A is a set, can be well-ordered, and the object {{A}:A is a set}
-is too big to be a set. Anyhow, in the back of our minds is the idea
-that the *order type* of a well-ordered set is the isomorphism class of
-that set, but the difficulty just mentioned forces us to define it
-differently -- by picking a representative from each class. That is,
-we\'d like to choose a whole lot of well-ordered sets in such a way that
+The notion of order-isomorphism gives us what we'd like to call an
+equivalence relation on the set of all well-ordered sets. 
+Unfortunately, we can't call it that because, for example, every set of the form 
+$\{A\}$, where $A$ is a set, can be well-ordered, and the object 
+$\{\{A\}:A is a set\}$ is too big to be a set. Anyhow, in the back of our minds 
+is the idea that the *order type* of a well-ordered set is the isomorphism class 
+of that set, but the difficulty just mentioned forces us to define it
+differently -- by picking a representative from each class. 
+That is, we'd like to choose a whole lot of well-ordered sets in such a way that
 every well-ordered set is order-isomorphic to exactly one of our special
-ones. We will call them 1,2,3,\...,w,$\omega+1$,\.... etc. and the general name
-for them will be ordinals.
+ones. We will call them $1$, $2$, $3$, $\dots$, $\omega$, $\omega+1$, $\dots$ 
+etc. and the general name for them will be ordinals.
 
 How to use ordinals {#using}
 --------------------------------------------------------------------------------
@@ -533,7 +533,7 @@ Now let us return to Borel sets. We can measure the complexity of such
 sets as follows. Say that a set has complexity at most 1 if it is open
 or closed, complexity at most 2 if it is a countable union of closed
 sets or a countable intersection of open sets, and in general complexity
-at most n if it is a countable union or intersection of sets of
+at most $\mathbb{N}$ if it is a countable union or intersection of sets of
 complexity at most n-1. If in addition the set is not of complexity at
 most n-1 then say that the set is of complexity n. More generally still,
 given an element $X$ of X, say that a set has complexity at most $X$ if it
@@ -578,7 +578,7 @@ most $X$ if, whatever player 2 plays for the first move, player 1\'s
 strategy is then of complexity at most y for some y< x. (For example,
 it is of complexity at most w if after the first pair of moves player 1
 can declare, for some n, that the game will definitely be won in the
-next n moves.) A strategy has complexity $X$ if it has complexity at most
+next $\mathbb{N}$ moves.) A strategy has complexity $X$ if it has complexity at most
 x and for no y< $X$ does it have complexity at most y.
 
 Here is a proof that, for every open game, either player 2 has a winning
@@ -586,10 +586,10 @@ strategy or player 1 has a winning strategy of some countable
 complexity. Suppose that player 1 does not have such a strategy. Then,
 whatever player 1 plays, player 2 must have a move such that player 1
 still does not have a winning strategy of countable complexity. Why is
-this? Well, otherwise player 1 could play some n such that, for every
+this? Well, otherwise player 1 could play some $\mathbb{N}$ such that, for every
 possible move m of player 2 there was then a winning strategy f~m~ of
 complexity some countable x~m~. Then the following is a winning strategy
-for player 1: play n and follow with strategy f~m~ if player 2 plays m.
+for player 1: play $\mathbb{N}$ and follow with strategy f~m~ if player 2 plays m.
 Since the x~m~ are countable, there is some $X$ in $X$ that exceeds all of
 them, so this strategy has complexity at most x.
 
@@ -643,14 +643,14 @@ an order-preserving bijection from R to the open interval (-1,1)
 well-ordered subset a of R and an open interval (c,d), we can find a
 well-ordered subset of (c,d) that is isomorphic to a.
 
-We can therefore build a set as follows. For each n let b~n~ be an
+We can therefore build a set as follows. For each $\mathbb{N}$ let b~n~ be an
 isomorphic copy of a~n~ that lives in the interval (n-1,n) and let b the
 the union of the b~n~. It is easy to see that b is well-ordered -- given
-any non-empty subset first find the minimal n such that it intersects
+any non-empty subset first find the minimal $\mathbb{N}$ such that it intersects
 (n-1,n) and then find the minimal element of that intersection.
 
 Next, I claim that \[b\] is at least as big as every \[a~n~\]. If this
-were not the case, then we would be able to find n such that b was
+were not the case, then we would be able to find $\mathbb{N}$ such that b was
 isomorphic to an initial segment of \[a~n~\]. But since a~n~ embeds into
 b via the isomorphism with b~n~ this would show that \[a~n~\] was
 order-isomorphic to a subset of an initial segment I(t) of itself. But
