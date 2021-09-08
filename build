@@ -10,9 +10,17 @@ pandoc \
 pandoc \
   --standalone \
   --include-in-header html/Alegreya.html \
-  -V mainfont=Alegreya \
-  -V fontsize="24px" \
+  -V lang=en \
+  --css css/style.css \
   --mathjax \
   --toc \
   -o "index.html" \
+  "A beginner's guide to countable ordinals.md"
+
+# HTML generation
+pandoc \
+  --standalone \
+  --mathjax \
+  --toc \
+  -o "index-default.html" \
   "A beginner's guide to countable ordinals.md"
