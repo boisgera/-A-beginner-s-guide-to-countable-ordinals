@@ -10,6 +10,7 @@ pandoc \
 pandoc \
   --standalone \
   --include-in-header html/Alegreya.html \
+  --include-in-header html/TOC.html \
   -V lang=en \
   --css css/style.css \
   --mathjax \

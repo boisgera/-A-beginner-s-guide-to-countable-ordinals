@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -7,137 +7,6 @@
   <meta name="author" content="Timothy Gowers" />
   <title>A beginner’s guide to countable ordinals</title>
   <style>
-    html {
-      line-height: 1.5;
-      font-family: Alegreya;
-      font-size: 24px;
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 1em;
-      }
-    }
-    @media print {
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
-      font-size: 85%;
-      margin: 0;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
@@ -145,6 +14,7 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
+  <link rel="stylesheet" href="css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -152,6 +22,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+      let h3 = document.createElement("h3");
+      h3.innerHTML = "Table of contents";
+      let toc = document.getElementById("TOC");
+      toc.prepend(h3);
+  });    
+  </script>
 </head>
 <body>
 <header id="title-block-header">
@@ -172,7 +50,7 @@
 <ul>
 <li><a href="#definition-of-well-ordered-sets">Definition of well-ordered sets</a></li>
 <li><a href="#maps-between-well-ordered-sets">Maps between well-ordered sets</a></li>
-<li><a href="#order-types-of-well-ordered-sets.">Order-types of well-ordered sets.</a></li>
+<li><a href="#order-types-of-well-ordered-sets">Order-types of well-ordered sets</a></li>
 </ul></li>
 <li><a href="#using">How to use ordinals</a></li>
 <li><a href="#uncountablewoset">Proof that there is an uncountable well-ordered set</a></li>
@@ -245,18 +123,18 @@
 <p>Before moving on, let us see why every game of complexity <span class="math inline">\(\omega^2\)</span> is determined. I shall assume that every game of complexity <span class="math inline">\(m\omega+n\)</span> is determined (as an inductive hypothesis). If player 2 has no winning strategy, there must be some first move for player 1 such that player 2 still has no winning strategy. After they have both had their first turn, the position is a game of complexity <span class="math inline">\(m\omega+n\)</span> for some <span class="math inline">\(m,n\)</span>, and is therefore determined. Since player 2 does not have a winning strategy, player 1 must. But this gives player 1 a strategy for the whole game – do that first move and then apply whatever winning strategy is appropriate after player 2’s first move.</p>
 <h2 id="wosets">Well-ordered sets</h2>
 <h3 id="definition-of-well-ordered-sets">Definition of well-ordered sets</h3>
-<p>A <em>total ordering</em> , or just ordering, on a set <span class="math inline">\(X\)</span> is a transitive relation &lt; such that for every x,y in <span class="math inline">\(X\)</span> exactly one of x&lt; y, x=y or y&lt; <span class="math inline">\(X\)</span> is true. A total ordering is called a <em>well-ordering</em> if, in addition, every non-empty subset of <span class="math inline">\(X\)</span> has a minimal element. That is, if Y is a non-empty subset of X, there exists some y in Y such that every z in Y is greater than or equal to y.</p>
-<p>The most familiar well-ordering is the usual ordering on the natural numbers: every non-empty subset of N has a least element. (This fact is discussed a bit more <a href="#induction">below</a>.) A more complicated one was defined earlier, namely the set of all polynomials p with non-negative integer coefficients, with p &lt; q if and only if p(x)&lt; q(x) for all sufficiently large x. To see that this is a well-ordering, let P be a set of such polynomials. From P we can pick all polynomials of least degree. (Note that if deg(p)&lt; deg(q) then p&lt; 1.) Amongst those we can select with smallest leading coefficient. (Note that if p has a smaller leading coefficient than q and they are of the same degree, then p&lt; q.) Amongst those we can take the ones with smallest next coefficient, and so on. We end up with a polynomial p which is smaller in the ordering than every other q in P.</p>
+<p>A <em>total ordering</em>, or just ordering, on a set <span class="math inline">\(X\)</span> is a transitive relation <span class="math inline">\(&lt;\)</span> such that for every <span class="math inline">\(x,y\)</span> in <span class="math inline">\(X\)</span> exactly one of <span class="math inline">\(x &lt; y\)</span>, <span class="math inline">\(x=y\)</span> or <span class="math inline">\(y &lt; x\)</span> is true. A total ordering is called a <em>well-ordering</em> if, in addition, every non-empty subset of <span class="math inline">\(X\)</span> has a minimal element. That is, if <span class="math inline">\(Y\)</span> is a non-empty subset of <span class="math inline">\(X\)</span>, there exists some <span class="math inline">\(y\)</span> in <span class="math inline">\(Y\)</span> such that every <span class="math inline">\(z\)</span> in <span class="math inline">\(Y\)</span> is greater than or equal to <span class="math inline">\(y\)</span>.</p>
+<p>The most familiar well-ordering is the usual ordering on the natural numbers: every non-empty subset of <span class="math inline">\(\mathbb{N}\)</span> has a least element. (This fact is discussed a bit more <a href="#induction">below</a>.) A more complicated one was defined earlier, namely the set of all polynomials <span class="math inline">\(p\)</span> with non-negative integer coefficients, with <span class="math inline">\(p &lt; q\)</span> if and only if <span class="math inline">\(p(x) &lt; q(x)\)</span> for all sufficiently large <span class="math inline">\(x\)</span>. To see that this is a well-ordering, let <span class="math inline">\(P\)</span> be a set of such polynomials. From <span class="math inline">\(P\)</span> we can pick all polynomials of least degree. (Note that if <span class="math inline">\(\mathrm{deg}(p) &lt; \mathrm{deg}(q)\)</span> then <span class="math inline">\(p&lt; 1\)</span>.) Amongst those we can select with smallest leading coefficient. (Note that if <span class="math inline">\(p\)</span> has a smaller leading coefficient than <span class="math inline">\(q\)</span> and they are of the same degree, then <span class="math inline">\(p &lt; q\)</span>.) Amongst those we can take the ones with smallest next coefficient, and so on. We end up with a polynomial <span class="math inline">\(p\)</span> which is smaller in the ordering than every other <span class="math inline">\(q\)</span> in <span class="math inline">\(P\)</span>.</p>
 <h3 id="maps-between-well-ordered-sets">Maps between well-ordered sets</h3>
-<p>A set with a total ordering is called a totally ordered set. A map f between two totally ordered sets <span class="math inline">\(X\)</span> and Y is called an <em>order-isomorphism</em> if it is a bijection and f(x)&lt; f(y) if and only if x&lt; y. In other words, it is an invertible map that preserves order. If there is an order-isomorphism between <span class="math inline">\(X\)</span> and Y then <span class="math inline">\(X\)</span> and Y are said to be <em>order-isomorphic</em> .</p>
-<p>Let <span class="math inline">\(X\)</span> be a well-ordered set. An <em>initial segment</em> of <span class="math inline">\(X\)</span> is a subset of the form I(z)={x:x&lt; z}. A very important fact about well-ordered sets is the following: if <span class="math inline">\(X\)</span> and Y are well-ordered sets then either <span class="math inline">\(X\)</span> is order-isomorphic to Y or one of <span class="math inline">\(X\)</span> and Y is order-isomorphic to an initial segment of the other. Here is (a sketch of) how to prove it.</p>
-<p>Roughly what we want to do is to take the smallest element of <span class="math inline">\(X\)</span> and pair it with the smallest element of Y, then the next smallest then the next smallest and so on. Of course, this `and so on' is one of our problematic ones, because we may need to pair off the omegath smallest elements and so on well beyond infinity. However, we can avoid getting into those details by using the well-ordering property.</p>
-<p>Let Z be the set of all z in <span class="math inline">\(X\)</span> such that I(z) is order-isomorphic to an initial segment of Y. If z is in Z and w&lt; z then it is easy to see that w is in Z. Hence, either Z is all of <span class="math inline">\(X\)</span> or it is the initial segment I(u), where u is the least element of <span class="math inline">\(X\)</span> that does not belong to Z.</p>
-<p>Next, I claim that if z is in Z, then there is exactly one isomorphism from I(z) to an initial segment of Y. For if not, let w be minimal such that there are two distinct order-isomorphisms <span class="math inline">\(f\)</span> and g from I(w) to initial segments of Y. Let v be minimal such that f(v) does not equal g(v). Then <span class="math inline">\(f\)</span> and g must agree on the initial segment I(v), and f(v) and g(v) are then forced to be the least element of Y that does not belong to f(I(v)).</p>
-<p>This observation allows us to define an order-isomorphism from Z into Y - each z in Z maps to the least element of Y not included in f(I(z)). Then either f(Z)=Y, in which case we are done, or f(Z) is a proper subset of Y, in which case Z must be the whole of <span class="math inline">\(X\)</span> or we'd be able to extend f.</p>
-<h3 id="order-types-of-well-ordered-sets.">Order-types of well-ordered sets.</h3>
-<p>As you may well have noticed, there is an obvious notation for at least some of the elements of a well-ordered set X. We could call the first element 1, the next 2, the next 3 and so on. (I can always talk about `the next': it just means the minimal element not yet mentioned.) If I've gone through all the natural numbers and still haven't included all of X, then I'll call the next element w, the next <span class="math inline">\(\omega+1\)</span> and so on. Then after those I'll have <span class="math inline">\(2\omega\)</span>, <span class="math inline">\(2\omega+1\)</span> and so on. Then <span class="math inline">\(3\omega\)</span>, 4w,... <span class="math inline">\(\omega^2\)</span>,..,<span class="math inline">\(\omega^{\omega}\)</span>,...,w<sup>w</sup>w^^,..., epsilon<sub>0</sub>,... . I didn't mention earlier that there are also epsilon<sub>1</sub>, epsilon<sub>2</sub>, .… , epsilon<sub>w</sub>,...,epsilon<sub>epsilon</sub>0<del>,... and even epsilon<sub>epsilon</sub>epsilon<sub>...</sub></del>.</p>
-<p>The notion of order-isomorphism gives us what we'd like to call an equivalence relation on the set of all well-ordered sets. Unfortunately, we can't call it that because, for example, every set of the form {A}, where A is a set, can be well-ordered, and the object {{A}:A is a set} is too big to be a set. Anyhow, in the back of our minds is the idea that the <em>order type</em> of a well-ordered set is the isomorphism class of that set, but the difficulty just mentioned forces us to define it differently – by picking a representative from each class. That is, we'd like to choose a whole lot of well-ordered sets in such a way that every well-ordered set is order-isomorphic to exactly one of our special ones. We will call them 1,2,3,...,w,<span class="math inline">\(\omega+1\)</span>,.… etc. and the general name for them will be ordinals.</p>
+<p>A set with a total ordering is called a totally ordered set. A map <span class="math inline">\(f\)</span> between two totally ordered sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is called an <em>order-isomorphism</em> if it is a bijection and <span class="math inline">\(f(x) &lt; f(y)\)</span> if and only if <span class="math inline">\(x &lt; y\)</span>. In other words, it is an invertible map that preserves order. If there is an order-isomorphism between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are said to be <em>order-isomorphic</em> .</p>
+<p>Let <span class="math inline">\(X\)</span> be a well-ordered set. An <em>initial segment</em> of <span class="math inline">\(X\)</span> is a subset of the form <span class="math inline">\(I(z) = \{x:x&lt; z\}\)</span>. A very important fact about well-ordered sets is the following: if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are well-ordered sets then either <span class="math inline">\(X\)</span> is order-isomorphic to <span class="math inline">\(Y\)</span> or one of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is order-isomorphic to an initial segment of the other. Here is (a sketch of) how to prove it.</p>
+<p>Roughly what we want to do is to take the smallest element of <span class="math inline">\(X\)</span> and pair it with the smallest element of <span class="math inline">\(Y\)</span>, then the next smallest then the next smallest and so on. Of course, this “and so on” is one of our problematic ones, because we may need to pair off the <span class="math inline">\(\omega\)</span>th smallest elements and so on well beyond infinity. However, we can avoid getting into those details by using the well-ordering property.</p>
+<p>Let <span class="math inline">\(Z\)</span> be the set of all <span class="math inline">\(z\)</span> in <span class="math inline">\(X\)</span> such that <span class="math inline">\(I(z)\)</span> is order-isomorphic to an initial segment of <span class="math inline">\(Y\)</span>. If <span class="math inline">\(z\)</span> is in <span class="math inline">\(Z\)</span> and <span class="math inline">\(w &lt; z\)</span> then it is easy to see that <span class="math inline">\(w\)</span> is in <span class="math inline">\(Z\)</span>. Hence, either <span class="math inline">\(Z\)</span> is all of <span class="math inline">\(X\)</span> or it is the initial segment <span class="math inline">\(I(u)\)</span>, where <span class="math inline">\(u\)</span> is the least element of <span class="math inline">\(X\)</span> that does not belong to <span class="math inline">\(Z\)</span>.</p>
+<p>Next, I claim that if <span class="math inline">\(z\)</span> is in <span class="math inline">\(Z\)</span>, then there is exactly one isomorphism from <span class="math inline">\(I(z)\)</span> to an initial segment of <span class="math inline">\(Y\)</span>. For if not, let <span class="math inline">\(w\)</span> be minimal such that there are two distinct order-isomorphisms <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> from <span class="math inline">\(I(w)\)</span> to initial segments of <span class="math inline">\(Y\)</span>. Let <span class="math inline">\(v\)</span> be minimal such that <span class="math inline">\(f(v)\)</span> does not equal <span class="math inline">\(g(v)\)</span>. Then <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> must agree on the initial segment <span class="math inline">\(I(v)\)</span>, and <span class="math inline">\(f(v)\)</span> and <span class="math inline">\(g(v)\)</span> are then forced to be the least element of <span class="math inline">\(Y\)</span> that does not belong to <span class="math inline">\(f(I(v))\)</span>.</p>
+<p>This observation allows us to define an order-isomorphism from <span class="math inline">\(Z\)</span> into <span class="math inline">\(Y\)</span> – each <span class="math inline">\(z\)</span> in <span class="math inline">\(Z\)</span> maps to the least element of <span class="math inline">\(Y\)</span> not included in <span class="math inline">\(f(I(z))\)</span>. Then either <span class="math inline">\(f(Z) = Y\)</span>, in which case we are done, or <span class="math inline">\(f(Z)\)</span> is a proper subset of <span class="math inline">\(Y\)</span>, in which case <span class="math inline">\(Z\)</span> must be the whole of <span class="math inline">\(X\)</span> or we’d be able to extend <span class="math inline">\(f\)</span>.</p>
+<h3 id="order-types-of-well-ordered-sets">Order-types of well-ordered sets</h3>
+<p>As you may well have noticed, there is an obvious notation for at least some of the elements of a well-ordered set <span class="math inline">\(X\)</span>. We could call the first element <span class="math inline">\(1\)</span>, the next <span class="math inline">\(2\)</span>, the next <span class="math inline">\(3\)</span> and so on. (I can always talk about “the next”: it just means the minimal element not yet mentioned.) If I’ve gone through all the natural numbers and still haven’t included all of <span class="math inline">\(X\)</span>, then I’ll call the next element <span class="math inline">\(\omega\)</span>, the next <span class="math inline">\(\omega+1\)</span> and so on. Then after those I’ll have <span class="math inline">\(2\omega\)</span>, <span class="math inline">\(2\omega+1\)</span> and so on. Then <span class="math inline">\(3\omega\)</span>, <span class="math inline">\(4 \omega\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(\omega^2\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(\omega^{\omega}\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(\omega^{\omega^{\omega}}\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(\epsilon_0\)</span>, <span class="math inline">\(\dots\)</span>. I didn’t mention earlier that there are also <span class="math inline">\(\epsilon_1\)</span>, <span class="math inline">\(\epsilon_2\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(\epsilon_{\omega}\)</span>, <span class="math inline">\(\epsilon_{\epsilon_0}\)</span>, <span class="math inline">\(\dots\)</span> and even <span class="math inline">\(\epsilon_{\epsilon_{\epsilon_{\dots}}}\)</span>.</p>
+<p>The notion of order-isomorphism gives us what we’d like to call an equivalence relation on the set of all well-ordered sets. Unfortunately, we can’t call it that because, for example, every set of the form <span class="math inline">\(\{A\}\)</span>, where <span class="math inline">\(A\)</span> is a set, can be well-ordered, and the object <span class="math inline">\(\{\{A\}:A is a set\}\)</span> is too big to be a set. Anyhow, in the back of our minds is the idea that the <em>order type</em> of a well-ordered set is the isomorphism class of that set, but the difficulty just mentioned forces us to define it differently – by picking a representative from each class. That is, we’d like to choose a whole lot of well-ordered sets in such a way that every well-ordered set is order-isomorphic to exactly one of our special ones. We will call them <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(\omega\)</span>, <span class="math inline">\(\omega+1\)</span>, <span class="math inline">\(\dots\)</span> etc. and the general name for them will be ordinals.</p>
 <h2 id="using">How to use ordinals</h2>
 <p>Let us think once again about the three problems we were grappling with earlier. What we were looking for was an <em>indexing set</em> – that is, a set X which we could use to label the terms of an infinite list, or rather something like a list. In each case, although the list would sometimes go on for ever but still not have finished, we could at any stage talk about the <em>next</em> item on the list. This suggests that what we really needed was a well-ordered set. The natural numbers are a very useful well-ordered set and are often used as an indexing set, but for these applications we wanted something larger.</p>
 <p>In this section I shall show how the following statement does the job. For the moment we can think of it as an axiom and later I shall prove it.</p>
@@ -266,20 +144,20 @@
 <p>Now I can make more formal an argument I gave earlier. For every <span class="math inline">\(X\)</span> in X there is a <em>successor</em> , that is, a least element y of <span class="math inline">\(X\)</span> which is greater than x. Since the map <span class="math inline">\(X\)</span> goes to t<sub>x</sub> is an order-isomorphism, there is no element of t between t<sub>x</sub> and t<sub>y</sub>. Therefore, that interval contains a rational q<sub>x</sub> and all those rationals are distinct. That contradicts the fact that X, and hence T, were supposed to be uncountable.</p>
 <p>This shows that there is no uncountable well-ordered subset of <span class="math inline">\([0, 1]\)</span>, which means that the “sequence” I constructed must eventually come to an end – by reaching 1. To make this formal, let us define the sequence explicitly as follows. First enumerate all the rationals in <span class="math inline">\([0, 1]\)</span>. Now, if I have defined t<sub>x</sub> then let y be the successor of x. The first basic lemma tells us that there is an s&gt; <span class="math inline">\(X\)</span> such that <span class="math inline">\(f\)</span> is bounded on the interval <span class="math inline">\([0, s]\)</span>. The interval (x,s] contains many rational numbers. For the sake of definiteness let t<sub>y</sub> be the first rational q in the enumeration such that <span class="math inline">\(f\)</span> is bounded on the interval [0,q]. If y is not the successor of any x, then define t<sub>y</sub> to be the supremum of all t<sub>x</sub> such that x&lt; y. Since <span class="math inline">\(f\)</span> is bounded up to every t<sub>x</sub> with x&lt; y and since these get arbitrarily close to t<sub>y</sub>, <span class="math inline">\(f\)</span> is bounded up to t<sub>y</sub>.</p>
 <p>As long as t<sub>y</sub> never equals 1 this defines a unique order isomorphism from <span class="math inline">\(X\)</span> into <span class="math inline">\([0, 1]\)</span>. (If not, let y be the first element of <span class="math inline">\(X\)</span> where anything goes wrong. But I've just shown unambiguously how to define t<sub>y</sub> once I've defined t<sub>x</sub> for all previous x.) It follows that for some y t<sub>y</sub>=1 and this shows that <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\([0, 1]\)</span>.</p>
-<p>Now let us return to Borel sets. We can measure the complexity of such sets as follows. Say that a set has complexity at most 1 if it is open or closed, complexity at most 2 if it is a countable union of closed sets or a countable intersection of open sets, and in general complexity at most n if it is a countable union or intersection of sets of complexity at most n-1. If in addition the set is not of complexity at most n-1 then say that the set is of complexity n. More generally still, given an element <span class="math inline">\(X\)</span> of X, say that a set has complexity at most <span class="math inline">\(X\)</span> if it is a countable union or intersection of sets each of which has complexity strictly less than x. [As before, this definition makes sense – or there would be a smallest <span class="math inline">\(X\)</span> for which it does not make sense, which there clearly isn't.]</p>
+<p>Now let us return to Borel sets. We can measure the complexity of such sets as follows. Say that a set has complexity at most 1 if it is open or closed, complexity at most 2 if it is a countable union of closed sets or a countable intersection of open sets, and in general complexity at most <span class="math inline">\(\mathbb{N}\)</span> if it is a countable union or intersection of sets of complexity at most n-1. If in addition the set is not of complexity at most n-1 then say that the set is of complexity n. More generally still, given an element <span class="math inline">\(X\)</span> of X, say that a set has complexity at most <span class="math inline">\(X\)</span> if it is a countable union or intersection of sets each of which has complexity strictly less than x. [As before, this definition makes sense – or there would be a smallest <span class="math inline">\(X\)</span> for which it does not make sense, which there clearly isn't.]</p>
 <p>Let us call an element <span class="math inline">\(X\)</span> in <span class="math inline">\(X\)</span> <em>countable</em> if the initial segment I(x) is countable. I now claim that every Borel set has complexity <span class="math inline">\(X\)</span> for some countable x. Let us say that such a set has <em>countable complexity</em> . To prove that, all I need to do is show that a countable union or intersection of sets of countable complexity also has contable complexity. Then it follows that, no matter how much one takes countable unions or intersections, starting with open and closed sets, the result will always have countable complexity.</p>
 <p>Let A<sub>1</sub>,A<sub>2</sub>,... be sets with countable complexities x<sub>1</sub>,x<sub>2</sub>,... . I claim first that there is an element <span class="math inline">\(X\)</span> of <span class="math inline">\(X\)</span> that exceeds all of the x<sub>n</sub>. To see this, first note that the union of the sets I(x<sub>n</sub>) is not the whole of X, since it is a countable union of countable sets and <span class="math inline">\(X\)</span> is uncountable. Now let <span class="math inline">\(X\)</span> be the smallest element of <span class="math inline">\(X\)</span> that belongs to none of the intervals I(x<sub>n</sub>). It is possible that x=x<sub>n</sub> for some n, but we can at least say that the successor y of <span class="math inline">\(X\)</span> exceeds every x<sub>n</sub>, from which it follows that the union or intersection of the A<sub>n</sub> has complexity at most y.</p>
 <p>It is not obvious, but can be shown, that for every countable <span class="math inline">\(X\)</span> in X there is a Borel set of complexity x. (Earlier we showed this for x=2, with an unnecessarily complicated example – the rational numbers is another.)</p>
-<p>Using X, we can also measure the complexity of winning strategies for player I in open games. By <span class="math inline">\(X\)</span> I now mean the uncountable well-ordered set and not the set of all winning sequences for the first player, which I shall call W. All we have to say is that a strategy is of complexity 0 if every sequence is a win for player 1, that is, if W=N<sup>N</sup>, so that player 1 has won before the game even starts. It is of complexity at most <span class="math inline">\(X\)</span> if, whatever player 2 plays for the first move, player 1's strategy is then of complexity at most y for some y&lt; x. (For example, it is of complexity at most w if after the first pair of moves player 1 can declare, for some n, that the game will definitely be won in the next n moves.) A strategy has complexity <span class="math inline">\(X\)</span> if it has complexity at most x and for no y&lt; <span class="math inline">\(X\)</span> does it have complexity at most y.</p>
-<p>Here is a proof that, for every open game, either player 2 has a winning strategy or player 1 has a winning strategy of some countable complexity. Suppose that player 1 does not have such a strategy. Then, whatever player 1 plays, player 2 must have a move such that player 1 still does not have a winning strategy of countable complexity. Why is this? Well, otherwise player 1 could play some n such that, for every possible move m of player 2 there was then a winning strategy f<sub>m</sub> of complexity some countable x<sub>m</sub>. Then the following is a winning strategy for player 1: play n and follow with strategy f<sub>m</sub> if player 2 plays m. Since the x<sub>m</sub> are countable, there is some <span class="math inline">\(X\)</span> in <span class="math inline">\(X\)</span> that exceeds all of them, so this strategy has complexity at most x.</p>
+<p>Using X, we can also measure the complexity of winning strategies for player I in open games. By <span class="math inline">\(X\)</span> I now mean the uncountable well-ordered set and not the set of all winning sequences for the first player, which I shall call W. All we have to say is that a strategy is of complexity 0 if every sequence is a win for player 1, that is, if W=N<sup>N</sup>, so that player 1 has won before the game even starts. It is of complexity at most <span class="math inline">\(X\)</span> if, whatever player 2 plays for the first move, player 1's strategy is then of complexity at most y for some y&lt; x. (For example, it is of complexity at most w if after the first pair of moves player 1 can declare, for some n, that the game will definitely be won in the next <span class="math inline">\(\mathbb{N}\)</span> moves.) A strategy has complexity <span class="math inline">\(X\)</span> if it has complexity at most x and for no y&lt; <span class="math inline">\(X\)</span> does it have complexity at most y.</p>
+<p>Here is a proof that, for every open game, either player 2 has a winning strategy or player 1 has a winning strategy of some countable complexity. Suppose that player 1 does not have such a strategy. Then, whatever player 1 plays, player 2 must have a move such that player 1 still does not have a winning strategy of countable complexity. Why is this? Well, otherwise player 1 could play some <span class="math inline">\(\mathbb{N}\)</span> such that, for every possible move m of player 2 there was then a winning strategy f<sub>m</sub> of complexity some countable x<sub>m</sub>. Then the following is a winning strategy for player 1: play <span class="math inline">\(\mathbb{N}\)</span> and follow with strategy f<sub>m</sub> if player 2 plays m. Since the x<sub>m</sub> are countable, there is some <span class="math inline">\(X\)</span> in <span class="math inline">\(X\)</span> that exceeds all of them, so this strategy has complexity at most x.</p>
 <p>This proves my claim that player 2 has a move that ensures that player 1 still has no winning strategy of countable complexity. But this argument can now be repeated. In other words, player 2 can play in such a way that player 1 never has a winning strategy of countable complexity, and in particular never wins the game (or else the complexity would be zero). If player 2 plays like this, the result will be some infinite sequence <span class="math inline">\((n_1, n_2, n_3, \dots)\)</span>. If it belonged to W, then there would be some k such that all sequences beginning <span class="math inline">\((n_1, n_2, \dots, n_k)\)</span> were also in W – by the definition of an open game. But this contradicts the fact that player 1 never wins. Hence, player 2 has a way of ensuring that the game results in a sequence not in W – that is, has a winning strategy.</p>
 <h2 id="uncountablewoset">Proof that there is an uncountable well-ordered set</h2>
 <p>Recall from earlier that we wanted to define ordinals to be order-isomorphism classes of well-ordered sets, but that set-theoretical considerations forbade this. This problem can be avoided if all we need is countable ordinals. Here is a definition that will do: a <em>countable ordinal</em> is an isomorphism class of well-ordered subsets of R. (We proved above that every well-ordered subset of R must be countable.) What, for example, is <span class="math inline">\(\omega+2\)</span>? It is the set of all sets of the form {t<sub>1</sub>,t<sub>2</sub>,...,<span class="math inline">\(u_1\)</span>,<span class="math inline">\(u_2\)</span>}, where the <span class="math inline">\(t_n\)</span> are a bounded increasing sequence, and every <span class="math inline">\(t_n\)</span> is less than <span class="math inline">\(u_1\)</span> which is less than <span class="math inline">\(u_2\)</span>.</p>
 <p>How can we now prove that there is an uncountable well-ordered set? All we have to do is use ordinals, as just constructed. Let us see why they come with a natural well-ordering and why there are uncountably many of them.</p>
 <p>The ordering is as follows. Write a, b for typical well-ordered subsets of R and [a], [b] for their isomorphism classes. Then [a]&lt;[b] if a is isomorphic to an initial segment of b. Clearly this gives a well-defined total ordering. To see that it is a well-ordering, let A be a set of ordinals and let [a] be an element of A. Then either [a] is minimal or there is a non-empty subset B consisting of all [b] such that b is isomorphic to an initial segment I(t) of a. Pick [b] such that t is minimized (which can be done as a is a well-ordered set of reals). Then [b] must be a minimal element of A.</p>
 <p>Now let us prove that there are uncountably many countable ordinals. (There is no paradox here – just as it is not paradoxical that there are infinitely many finite numbers.) If there were countably many, then we could write them as [a<sub>1</sub>],[a<sub>2</sub>],... . Now it is easy to construct an order-preserving bijection from R to the open interval (-1,1) (something built out of tan<sup>-1</sup> will do the job). Hence, given a well-ordered subset a of R and an open interval (c,d), we can find a well-ordered subset of (c,d) that is isomorphic to a.</p>
-<p>We can therefore build a set as follows. For each n let b<sub>n</sub> be an isomorphic copy of a<sub>n</sub> that lives in the interval (n-1,n) and let b the the union of the b<sub>n</sub>. It is easy to see that b is well-ordered – given any non-empty subset first find the minimal n such that it intersects (n-1,n) and then find the minimal element of that intersection.</p>
-<p>Next, I claim that [b] is at least as big as every [a<sub>n</sub>]. If this were not the case, then we would be able to find n such that b was isomorphic to an initial segment of [a<sub>n</sub>]. But since a<sub>n</sub> embeds into b via the isomorphism with b<sub>n</sub> this would show that [a<sub>n</sub>] was order-isomorphic to a subset of an initial segment I(t) of itself. But it is not hard to show that this is impossible. Let <span class="math inline">\(f\)</span> be the supposed isomorphism and let s be minimal such that f(s)&lt; s. (Such an s exists - t is an example.) But then f(s)=u for some u&lt; s and f(u)<u>&gt;</u>u, so <span class="math inline">\(f\)</span> is not order-preserving.</p>
+<p>We can therefore build a set as follows. For each <span class="math inline">\(\mathbb{N}\)</span> let b<sub>n</sub> be an isomorphic copy of a<sub>n</sub> that lives in the interval (n-1,n) and let b the the union of the b<sub>n</sub>. It is easy to see that b is well-ordered – given any non-empty subset first find the minimal <span class="math inline">\(\mathbb{N}\)</span> such that it intersects (n-1,n) and then find the minimal element of that intersection.</p>
+<p>Next, I claim that [b] is at least as big as every [a<sub>n</sub>]. If this were not the case, then we would be able to find <span class="math inline">\(\mathbb{N}\)</span> such that b was isomorphic to an initial segment of [a<sub>n</sub>]. But since a<sub>n</sub> embeds into b via the isomorphism with b<sub>n</sub> this would show that [a<sub>n</sub>] was order-isomorphic to a subset of an initial segment I(t) of itself. But it is not hard to show that this is impossible. Let <span class="math inline">\(f\)</span> be the supposed isomorphism and let s be minimal such that f(s)&lt; s. (Such an s exists - t is an example.) But then f(s)=u for some u&lt; s and f(u)<u>&gt;</u>u, so <span class="math inline">\(f\)</span> is not order-preserving.</p>
 <p>Finally, if [b] is at least as big as every [a<sub>n</sub>] then the successor of [b] cannot be one of the [a<sub>n</sub>]. (The successor is obtained by taking a bounded isomorphic copy of b, adding in an upper bound and taking the isomorphism class.)</p>
 <h2 id="notusing">How not to use ordinals</h2>
 <p>Now comes the moment to admit that my `applications' of countable ordinals were, in a sense, a con. The application to Borel sets wasn't really solving a problem – it was just classifying the Borel sets in quite an interesting way. As for the other two results – that continuous functions on <span class="math inline">\([0, 1]\)</span> are bounded and that open games are determined – it is downright silly to use ordinals for their proofs and very easy to remove them. This is almost always true of proofs that use countable ordinals. Though there are probably several counterexamples to this assertion, I myself know of only one theorem proved with countable ordinals for which a neater ordinal-free proof has not been discovered, and even there I am convinced that it exists.</p>
