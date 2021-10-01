@@ -456,10 +456,10 @@ The notion of order-isomorphism gives us what we'd like to call an
 equivalence relation on the set of all well-ordered sets. 
 Unfortunately, we can't call it that because, for example, every set of the form 
 $\{A\}$, where $A$ is a set, can be well-ordered, and the object 
-$\{\{A\}:A is a set\}$ is too big to be a set. Anyhow, in the back of our minds 
-is the idea that the *order type* of a well-ordered set is the isomorphism class 
-of that set, but the difficulty just mentioned forces us to define it
-differently -- by picking a representative from each class. 
+$\{\{A\}: A \; \mbox{is a set}\}$ is too big to be a set. 
+Anyhow, in the back of our minds is the idea that the *order type* of a 
+well-ordered set is the isomorphism class of that set, but the difficulty just mentioned forces us to define it differently -- by picking a representative 
+from each class. 
 That is, we'd like to choose a whole lot of well-ordered sets in such a way that
 every well-ordered set is order-isomorphic to exactly one of our special
 ones. We will call them $1$, $2$, $3$, $\dots$, $\omega$, $\omega+1$, $\dots$ 
@@ -470,7 +470,7 @@ How to use ordinals {#using}
 
 Let us think once again about the three problems we were grappling with
 earlier. What we were looking for was an *indexing set* -- that is, a set
-X which we could use to label the terms of an infinite list, or rather
+$X$ which we could use to label the terms of an infinite list, or rather
 something like a list. In each case, although the list would sometimes
 go on for ever but still not have finished, we could at any stage talk
 about the *next* item on the list. This suggests that what we really
@@ -487,111 +487,109 @@ it.
 Let me show how this axiom, together with the two basic lemmas, solves
 Problem 1 for us, and allows us to conclude that continuous functions on
 $[0, 1]$ are bounded. Recall that we were building a sequence
-t~1~,t~2~,\... which went on well beyond infinity. It is not hard to see
-that, at least to the point that we took it, this sequence forms a
-well-ordered subset of R (under the usual ordering). Indeed, it is
-order-isomorphic to the set we used to label the sequence -- which,
-though we thought of it as mere notation, does come with a natural
+$t_1$, $t_2$, $\dots$ which went on well beyond infinity. 
+It is not hard to see that, at least to the point that we took it, 
+this sequence forms a well-ordered subset of $\mathbb{R}$ (under the usual ordering). Indeed, it is order-isomorphic to the set we used to label the sequence 
+-- which, though we thought of it as mere notation, does come with a natural
 ordering.
 
 With that procedure in the back of our minds, let $X$ be an uncountable
 well-ordered set and let us imagine that we have tried to build a
-well-ordered subset T of $[0, 1]$ indexed by X, so that a typical element
-of T will be written t~x~ for some $X$ in X, and the map $X$ goes to t~x~
+well-ordered subset $T$ of $[0, 1]$ indexed by $X$, so that a typical element
+of $T$ will be written $t_x$ for some $x$ in $X$, and the map $x$ goes to $t_x$
 will be an order-isomorphism.
 
-Now I can make more formal an argument I gave earlier. For every $X$ in X
-there is a *successor* , that is, a least element y of $X$ which is
-greater than x. Since the map $X$ goes to t~x~ is an order-isomorphism,
-there is no element of t between t~x~ and t~y~. Therefore, that interval
-contains a rational q~x~ and all those rationals are distinct. That
-contradicts the fact that X, and hence T, were supposed to be
+Now I can make more formal an argument I gave earlier. For every $x$ in $X$
+there is a *successor*, that is, a least element $y$ of $X$ which is
+greater than $x$. Since the map $x$ goes to $t_x$ is an order-isomorphism,
+there is no element of $T$ between $t_x$ and $t_y$. Therefore, that interval
+contains a rational $q_x$ and all those rationals are distinct. That
+contradicts the fact that $X$, and hence $T$, were supposed to be
 uncountable.
 
 This shows that there is no uncountable well-ordered subset of $[0, 1]$,
 which means that the "sequence" I constructed must eventually come to
-an end -- by reaching 1. To make this formal, let us define the sequence
+an end -- by reaching $1$. To make this formal, let us define the sequence
 explicitly as follows. First enumerate all the rationals in $[0, 1]$.
-Now, if I have defined t~x~ then let y be the successor of x. The first
-basic lemma tells us that there is an s\> $X$ such that $f$ is bounded on
-the interval $[0, s]$. The interval (x,s\] contains many rational
-numbers. For the sake of definiteness let t~y~ be the first rational q
-in the enumeration such that $f$ is bounded on the interval \[0,q\]. If y
-is not the successor of any x, then define t~y~ to be the supremum of
-all t~x~ such that x< y. Since $f$ is bounded up to every t~x~ with x< y
-and since these get arbitrarily close to t~y~, $f$ is bounded up to t~y~.
+Now, if I have defined $t_x$ then let $y$ be the successor of $x$. 
+The first basic lemma tells us that there is an $s>x$ such that $f$ is bounded 
+on the interval $[0, s]$. The interval $\left(x,s\right]$ contains many rational
+numbers. For the sake of definiteness let $t_y$ be the first rational $q$
+in the enumeration such that $f$ is bounded on the interval $[0,q]$. 
+If $y$ is not the successor of any $x$, then define $t_y$ to be the supremum of
+all $t_x$ such that $x < y$. Since $f$ is bounded up to every $t_x$ with $x < y$
+and since these get arbitrarily close to $t_y$, $f$ is bounded up to $t_y$.
 
-As long as t~y~ never equals 1 this defines a unique order isomorphism
+As long as $t_y$ never equals $1$ this defines a unique order isomorphism
 from $X$ into $[0, 1]$. (If not, let y be the first element of $X$ where
-anything goes wrong. But I\'ve just shown unambiguously how to define
-t~y~ once I\'ve defined t~x~ for all previous x.) It follows that for
-some y t~y~=1 and this shows that $f$ is bounded on $[0, 1]$.
+anything goes wrong. But I've just shown unambiguously how to define
+$t_y$ once I've defined $t_x$ for all previous $x$.) It follows that for
+some $y$ $t_y=1$ and this shows that $f$ is bounded on $[0, 1]$.
 
-
+--------------------------------------------------------------------------------
 
 Now let us return to Borel sets. We can measure the complexity of such
 sets as follows. Say that a set has complexity at most 1 if it is open
 or closed, complexity at most 2 if it is a countable union of closed
 sets or a countable intersection of open sets, and in general complexity
 at most $\mathbb{N}$ if it is a countable union or intersection of sets of
-complexity at most n-1. If in addition the set is not of complexity at
-most n-1 then say that the set is of complexity n. More generally still,
-given an element $X$ of X, say that a set has complexity at most $X$ if it
+complexity at most $n-1$. If in addition the set is not of complexity at
+most $n-1$ then say that the set is of complexity $n$. More generally still,
+given an element $x$ of $X$, say that a set has complexity at most $X$ if it
 is a countable union or intersection of sets each of which has
-complexity strictly less than x. \[As before, this definition makes
+complexity strictly less than x. [As before, this definition makes
 sense -- or there would be a smallest $X$ for which it does not make sense,
-which there clearly isn\'t.\]
+which there clearly isn\'t.]
 
-Let us call an element $X$ in $X$ *countable* if the initial segment I(x) is
-countable. I now claim that every Borel set has complexity $X$ for some
-countable x. Let us say that such a set has *countable complexity* . To
-prove that, all I need to do is show that a countable union or
-intersection of sets of countable complexity also has contable
-complexity. Then it follows that, no matter how much one takes countable
-unions or intersections, starting with open and closed sets, the result
-will always have countable complexity.
+Let us call an element $x$ in $X$ *countable* if the initial segment $I(x)$ is
+countable. I now claim that every Borel set has complexity $x$ for some
+countable $x$. Let us say that such a set has *countable complexity*. 
+To prove that, all I need to do is show that a countable union or intersection 
+of sets of countable complexity also has countable complexity. 
+Then it follows that, no matter how much one takes countable unions or 
+intersections, starting with open and closed sets, the result will always have countable complexity.
 
-Let A~1~,A~2~,\... be sets with countable complexities x~1~,x~2~,\... .
-I claim first that there is an element $X$ of $X$ that exceeds all of the
-x~n~. To see this, first note that the union of the sets I(x~n~) is not
-the whole of X, since it is a countable union of countable sets and $X$ is
-uncountable. Now let $X$ be the smallest element of $X$ that belongs to none
-of the intervals I(x~n~). It is possible that x=x~n~ for some n, but we
-can at least say that the successor y of $X$ exceeds every x~n~, from
-which it follows that the union or intersection of the A~n~ has
-complexity at most y.
+Let $A_1$, $A_2$, $\dots$ be sets with countable complexities $x_1$, $x_2$, $\dots$.
+I claim first that there is an element $x$ of $X$ that exceeds all of the
+$x_n$. To see this, first note that the union of the sets $I(x_n)$ is not
+the whole of $X$, since it is a countable union of countable sets and $X$ is
+uncountable. Now let $x$ be the smallest element of $X$ that belongs to none
+of the intervals $I(x_n)$. It is possible that $x=x_n$ for some $n$, but we
+can at least say that the successor $y$ of $x$ exceeds every $x_n$, from
+which it follows that the union or intersection of the $A_n$ has
+complexity at most $y$.
 
-It is not obvious, but can be shown, that for every countable $X$ in X
-there is a Borel set of complexity x. (Earlier we showed this for x=2,
+It is not obvious, but can be shown, that for every countable $x$ in $X$
+there is a Borel set of complexity $x$. (Earlier we showed this for $x=2$,
 with an unnecessarily complicated example -- the rational numbers is
 another.)
 
+--------------------------------------------------------------------------------
 
-
-Using X, we can also measure the complexity of winning strategies for
-player I in open games. By $X$ I now mean the uncountable well-ordered set
+Using $X$, we can also measure the complexity of winning strategies for
+player $I$ in open games. By $X$ I now mean the uncountable well-ordered set
 and not the set of all winning sequences for the first player, which I
-shall call W. All we have to say is that a strategy is of complexity 0
-if every sequence is a win for player 1, that is, if W=N^N^, so that
-player 1 has won before the game even starts. It is of complexity at
-most $X$ if, whatever player 2 plays for the first move, player 1\'s
-strategy is then of complexity at most y for some y< x. (For example,
-it is of complexity at most w if after the first pair of moves player 1
-can declare, for some n, that the game will definitely be won in the
-next $\mathbb{N}$ moves.) A strategy has complexity $X$ if it has complexity at most
-x and for no y< $X$ does it have complexity at most y.
+shall call $W$. All we have to say is that a strategy is of complexity 0
+if every sequence is a win for player 1, that is, if $W=\mathbb{N}^{\mathbb{N}}$, 
+so that player 1 has won before the game even starts. 
+It is of complexity at most $X$ if, whatever player 2 plays for the first move, 
+player 1's strategy is then of complexity at most $y$ for some $y < x$. 
+(For example, it is of complexity at most $w$ if after the first pair of moves 
+player 1 can declare, for some $n$, that the game will definitely be won in the
+next $n$ moves.) A strategy has complexity $X$ if it has complexity at most
+$x$ and for no $y < x$ does it have complexity at most $y$.
 
 Here is a proof that, for every open game, either player 2 has a winning
 strategy or player 1 has a winning strategy of some countable
-complexity. Suppose that player 1 does not have such a strategy. Then,
-whatever player 1 plays, player 2 must have a move such that player 1
-still does not have a winning strategy of countable complexity. Why is
-this? Well, otherwise player 1 could play some $\mathbb{N}$ such that, for every
-possible move m of player 2 there was then a winning strategy f~m~ of
-complexity some countable x~m~. Then the following is a winning strategy
-for player 1: play $\mathbb{N}$ and follow with strategy f~m~ if player 2 plays m.
-Since the x~m~ are countable, there is some $X$ in $X$ that exceeds all of
-them, so this strategy has complexity at most x.
+complexity. Suppose that player 1 does not have such a strategy. 
+Then, whatever player 1 plays, player 2 must have a move such that player 1
+still does not have a winning strategy of countable complexity. Why is this? 
+Well, otherwise player 1 could play some $n$ such that, for every
+possible move nmn of player 2 there was then a winning strategy $f_m$ of
+complexity some countable $x_m$. Then the following is a winning strategy
+for player 1: play $n$ and follow with strategy $f_m$ if player 2 plays $m$.
+Since the $x_m$ are countable, there is some $x$ in $X$ that exceeds all of
+them, so this strategy has complexity at most $x$.
 
 This proves my claim that player 2 has a move that ensures that player 1
 still has no winning strategy of countable complexity. But this argument
@@ -599,11 +597,11 @@ can now be repeated. In other words, player 2 can play in such a way
 that player 1 never has a winning strategy of countable complexity, and
 in particular never wins the game (or else the complexity would be
 zero). If player 2 plays like this, the result will be some infinite
-sequence $(n_1, n_2, n_3, \dots)$. If it belonged to W, then there would be
-some k such that all sequences beginning $(n_1, n_2, \dots, n_k)$ were also
-in W -- by the definition of an open game. But this contradicts the fact
+sequence $(n_1, n_2, n_3, \dots)$. If it belonged to $W$, then there would be
+some $k$ such that all sequences beginning $(n_1, n_2, \dots, n_k)$ were also
+in $W$ -- by the definition of an open game. But this contradicts the fact
 that player 1 never wins. Hence, player 2 has a way of ensuring that the
-game results in a sequence not in W -- that is, has a winning strategy.
+game results in a sequence not in $W$ -- that is, has a winning strategy.
 
 
 Proof that there is an uncountable well-ordered set {#uncountablewoset}
